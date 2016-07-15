@@ -1,0 +1,21 @@
+
+rule cutreadme
+  command = ./tools/cutreadme $in $out
+
+rule mdhtml
+  command = pandoc -f markdown -t html -V "title:Leandro Penz's CV" -s -S --template pandoc-bootstrap/template.html --css pandoc-bootstrap/template.css -o $out $in
+
+rule cvrender
+  command = ./tools/jinja2-render -y lpenz.yml -o $out $in
+
+rule cdpdflatex
+  command = ./tools/cddo $in $$PWD/tools/latexer
+
+build resumecls/cv.tex: cvrender resumecls/cv.tex.jinja | lpenz.yml ./tools/jinja2-render
+
+build resumecls/cv.pdf: cdpdflatex resumecls/cv.tex | ./tools/cddo ./tools/latexer ./resumecls/resume.cls
+
+build _readme.md: cutreadme README.md | ./tools/cutreadme
+
+build index.html: mdhtml _readme.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
+

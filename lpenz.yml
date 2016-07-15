@@ -1,0 +1,143 @@
+---
+name: Leandro Lisboa Penz
+email: lpenz@lpenz.org
+phone: +55 +51 9158 0600
+homepage: https://www.lpenz.org
+lattes: http://lattes.cnpq.br/0824061646899870
+stackoverflow: https://stackoverflow.com/cv/lpenz
+aboutme: |
+    I'm currently working as an embedded software architect of DmOS ---
+    DATACOM's universal embedded OS. I focus on modularity, continuous
+    integration, incremental qualification and DevOps. I work very closely with
+    the DevOps team, bringing solutions and new technologies, and also helping
+    in general.
+
+    I was one of the architects that worked on the initial definitions of the
+    architecture, processes and tools used nowadays in the company. The
+    architecture group itself was something new back then.
+
+    Before the creation of the architecture group, I led small (8) development
+    teams. At first, I led teams of embedded software development for about 5
+    years, as I started as a developer myself. I then led the test
+    infrastructure team for about a year before becoming a software architect.
+
+    I hold a master degree in computer science from UFRGS. My research line was
+    on computer networks, distributed systems and fault tolerance. My
+    dissertation was about distributed firewall rule coherence. I implemented
+    the prototype checker in Haskell.
+
+    I hold an MBA on management and leadership from UNISINOS. I graduated in
+    electrical engineering, also from UFRGS.
+
+    I value technical excellence, out-of-the-box thinking, generalism, strategic
+    planning and long-term maintainability. I'm always looking for
+    vulnerabilities and enhancement opportunities in my knowledge and tool set.
+
+    Out of the professional context, I have studied and obtained a license to fly
+    sailplanes. I can definitely say that I learned a lot from doing that, from the
+    differences with my area (extreme risk aversion) as well as from the
+    similarities (briefing/debriefing ~ sprint planning/review).
+
+professional:
+  - place: DATACOM
+    job: Embedded software architect
+    period: 2014 -- present
+    description: |
+      Software architect of DATACOM's embedded universal operating system: DmOS.
+
+      - Research and high-level definition the system architecture;
+      - Design of the overall development process.
+
+      Software architect assigned to DevOps.
+
+      - Initial tooling and structuring of the DevOps infrastructure;
+      - Alignment of the infrastructure with DmOS's requirements.
+  - place: DATACOM
+    job: Embedded Software Team Leader
+    period: 2007 -- 2014
+    description: |
+      Software Team Leader of Datacom's NG-SDH Multiplexer product line.
+
+      - Coordination of small teams (8) of embedded software developers.
+      - Guidance and reference in the development of solutions.
+
+      Software Team Leader of Ethernet switch test automation team.
+
+      - Full stack development
+  - place: DATACOM
+    job: Embedded software developer
+    period: 2002 -- 2007
+    description: |
+      Team member of the first NG-SDH Multiplexer developed in Brazil.
+
+      - Software development using the C linguage for embedded Linux
+        systems: network servers, debug tools and drivers (kernel space).
+      - Unix server administration and maintenance.
+      - Script development (test automation) and scripting language
+        extension: Lua, Python and TCL (Expect).
+education:
+  - place: Vale do Rio dos Sinos University (UNISINOS)
+    course: MBA --- Organizational Leadership and Management
+    period: 2012 -- 2013
+    description: |
+      Modules:
+
+      - Business management
+      - Project management
+      - Human resources
+      - Leadership
+      - Organizational identity and culture
+  - place: Federal University of Rio Grande do Sul (UFRGS)
+    course: Master of Science, Computer Science
+    period: 2006--2008
+    description: |
+      *Orientation*: Prof. Dr. Raul Fernando Weber  
+      *Research line*: fault tolerance, network security and distributed systems.  
+      *Dissertation*: Coherence in distributed packet filters  
+      Formal definition of the concept of anomaly in isolated and distributed
+      network packet filters through the use of graphs and set theory.
+      Development of a prototype anomaly checker in Haskell.  
+      Online at <http://www.lume.ufrgs.br/handle/10183/22813>
+
+  - place: Federal University of Rio Grande do Sul (UFRGS)
+    course: Graduation, Electrical Engineering
+    period: 1998 -- 2002
+
+courses:
+  - place: Pontif\'icia Universidade Cat\'olica --- RS
+    course: "Agile methodologies: project management with SCRUM"
+    period: 2009
+    load: 12h
+
+  - place: Vale do Rio dos Sinos University (UNISINOS)
+    course: Software project management
+    period: 2006
+    load: 21h
+    description: |
+      Study of PMI's PMBOK.
+
+  - place: UFRGS - Data processing center
+    course: TCP/IPv4 routing --- Internet high availability
+    period: 2003
+    load: 16h
+    description: |
+      Focused on network routing protocols: RIP, OSPF and BGP.
+
+random: |
+  - I installed my first Debian GNU/Linux at home in 2003, and never reinstalled it
+    from scratch. I use and update it constantly (I use the ``testing'' release).
+  - I learned Haskell while developing the prototype of my MSc dissertation in 2006.
+    Since then, I have used it on side projects and on programming contests when I
+    have the chance.
+  - Even though I did not take computer science at graduation, I was 6th on the
+    entry exam of the MSc at my University (UFRGS).
+  - I once got all questions right in a logical reasoning test. The psychologist
+    that evaluated it said that she had never seen that before.
+
+languages:
+  - lang: portuguese
+    skill: Mothertongue
+  - lang: english
+    skill: Fluent
+  - lang: german
+    skill: Basic Knowledge

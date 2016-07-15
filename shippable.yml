@@ -1,0 +1,16 @@
+env:
+  global:
+    - AWS_DEFAULT_REGION="sa-east-1"
+    - secure: kO65HfhAJxhHZf0//41Re6Od2drk/PitzK5amIT6ZYn7WgEXAFnK4Zkwo+YdnSLTsGfD3HVJgKr91wVw0YF+9EPdRZvxq/u+Ko1zuISEYSIK1CWz4Kb2uVo3+Ns1EuE+YTD41cB9iju2KcIOuaDhoe+CdJ3e7zHh2yBu5bZfSTJg661u2TVuOAQ9bLidBnvm+Ap6sxl1Ob1iZOkB/8Z4yquTsjCrvzzQOWeTVjjR9fIKYLm1Dj7RqRF8OZ5S4hBAc3ExWsKdhsomNt3nQ8mfLYSb9Gff1v+Emddx3Eio0B3ypX+KKTncA3ku4J9nUw92W555yzszDqQWWq9Woc+fCQ==
+build:
+  pre_ci:
+    - docker build -t cv:latest .
+  pre_ci_boot:
+    image_name: cv
+    image_tag: latest
+    pull: false
+    options: "-v $PWD:/home/user/work -e MY_UID=$UID"
+  ci:
+    - ninja -v
+  on_success:
+    - aws s3 sync --delete --exclude=.git/* . s3://cv.lpenz.org/

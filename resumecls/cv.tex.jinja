@@ -1,0 +1,95 @@
+\documentclass[margin,line]{resume}
+\usepackage{hyperref}
+
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\title{}
+\author{}
+\begin{document}
+
+\newcommand{\nl}[0]{\vspace{1mm}\\}
+
+\name{\Large (((name)))}
+\begin{resume}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{\mysidestyle Contact information}
+
+    Email: \hfill \href{mailto:(((email)))}{(((email)))} \\
+    Phone: \hfill (((phone))) \\
+    Homepage: \hfill \url{(((homepage)))} \\
+    Lattes CV: \hfill \url{(((lattes)))} \\
+    Stackoverflow CV: \hfill \url{(((stackoverflow)))}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{\mysidestyle About me}
+
+    (((aboutme | markdown)))
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{\mysidestyle Professional experience}
+
+    ((* for p in professional *))
+
+    ((* if loop.index == 2 *))
+    \clearpage
+    ((* endif *))
+
+    \textbf{(((p.place)))} \nl{}
+    \textsl{(((p.job)))} \hfill \textbf{(((p.period)))}
+
+    (((p.description | markdown)))
+
+    ((* endfor *))
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{\mysidestyle Education}
+
+    ((* for e in education *))
+
+    \textbf{(((e.place)))} \nl{}
+    \textsl{(((e.course)))} \hfill \textbf{(((e.period)))}
+
+    (((e.description | markdown)))
+
+    ((* endfor *))
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \clearpage
+    \section{\mysidestyle Other courses}
+
+    ((* for c in courses *))
+
+    \textbf{(((c.place)))} \nl{}
+    \textsl{(((c.course)))} \hfill \textbf{(((c.period)))} \nl{}
+    Course load: (((c.load)))
+
+    (((c.description | markdown)))
+
+    ((* endfor *))
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{\mysidestyle Languages}
+
+    \begin{tabular}{rl}
+        ((* for l in languages *))
+        \textsc{(((l.lang))):}&(((l.skill)))\\
+        ((* endfor *))
+    \end{tabular}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \section{\mysidestyle Random achievements and anecdotes}
+
+    (((random | markdown)))
+
+\end{resume}
+\end{document}
+
+% vim: ft=tex.jinja
