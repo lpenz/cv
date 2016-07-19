@@ -12,12 +12,13 @@ My CV is available in the following formats, or layouts:
 
 ## Behind the scenes
 
-I couldn't resist keeping my *Curriculum Vitae* using the same techniques I use
-for development, namely:
+I keep my *Curriculum Vitae* using software development techniques,
+namely:
 
 - Keeping the source code in [github](https://github.com/lpenz/cv).
-- Adding automated [tests](https://app.shippable.com/projects/577f06e63be4f4faa56c2d2e/status/).
-- Continous deployment to <http://cv.lpenz.org>.
+- Using automated [tests](https://app.shippable.com/projects/577f06e63be4f4faa56c2d2e/status/)
+  and static analysis.
+- Continuous deployment to <http://cv.lpenz.org>.
 
 
 The structure of the data is as follows:

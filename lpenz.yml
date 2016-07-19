@@ -125,7 +125,7 @@ courses:
 
 random: |
   - I installed my first Debian GNU/Linux at home in 2003, and never reinstalled it
-    from scratch. I use and update it constantly (I use the ``testing'' release).
+    from scratch. I use the "testing" release, and update it constantly.
   - I learned Haskell while developing the prototype of my MSc dissertation in 2006.
     Since then, I have used it on side projects and on programming contests when I
     have the chance.
@@ -133,6 +133,9 @@ random: |
     entry exam of the MSc at my University (UFRGS).
   - I once got all questions right in a logical reasoning test. The psychologist
     that evaluated it said that she had never seen that before.
+  - This CV is maintained at <http://github.com/lpenz/cv> with configuration
+    management, automated tests and continuous deployment
+    to <http://cv.lpenz.org>.
 
 languages:
   - lang: Portuguese
