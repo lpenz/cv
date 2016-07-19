@@ -13,6 +13,7 @@ build:
   ci:
     - grep -lr '[e]nv python' . | xargs flake8
     - grep -lr '[e]nv python' . | py3kwarn
+    - grep -lr '^#!/[b]in/bash' . | xargs shellcheck
     - ninja -v
   on_success:
     - aws s3 sync --delete --exclude=.git/* . s3://cv.lpenz.org/
