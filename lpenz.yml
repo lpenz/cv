@@ -135,9 +135,9 @@ random: |
     that evaluated it said that she had never seen that before.
 
 languages:
-  - lang: portuguese
+  - lang: Portuguese
     skill: Mothertongue
-  - lang: english
+  - lang: English
     skill: Fluent
-  - lang: german
+  - lang: German
     skill: Basic Knowledge
