@@ -4,7 +4,6 @@
 import sys
 import os
 import codecs
-import locale
 
 import json
 import yaml
@@ -78,8 +77,8 @@ def main():
         d[k] = v
     o = sys.stdout
     if opts.output:
-        o = codecs.open(opts.output + '.tmp', "w",
-                        locale.getpreferredencoding())
+        o = codecs.open(opts.output + '.tmp', 'w',
+                        'UTF-8')
     t.stream(d).dump(o)
     if opts.output:
         o.close()
