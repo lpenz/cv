@@ -20,6 +20,11 @@ RUN set -x -e; \
     echo 'ALL ALL=NOPASSWD:ALL' > /etc/sudoers.d/all; \
     chmod 0400 /etc/sudoers.d/all
 
+# install pip packages:
+RUN set -x -e; \
+    pip install \
+        py3kwarn==0.4.4
+
 # setup entrypoint with user UID/GID from host
 RUN set -x -e; \
     (\
