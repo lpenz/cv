@@ -8,6 +8,7 @@
 My CV is available in the following formats, or layouts:
 
 - [resume.cls PDF](http://cv.lpenz.org/resumecls/cv.pdf)
+- [beamer presentation](http://cv.lpenz.org/beamer/cv.pdf)
 
 
 ## Behind the scenes

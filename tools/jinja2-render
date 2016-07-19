@@ -4,6 +4,7 @@
 import sys
 import os
 import codecs
+import re
 
 import json
 import yaml
@@ -29,6 +30,10 @@ def markdown_filter(value, language='latex'):
         tmp.name])
     tmp.close()
     return out
+
+
+def regex_filter(value, match, replace):
+    return re.sub(match, replace, value)
 
 
 def main():
@@ -64,6 +69,7 @@ def main():
     env.coment_start_string = '((='
     env.coment_end_string = '=))'
     env.filters['markdown'] = markdown_filter
+    env.filters['regex'] = regex_filter
     t = env.get_template(os.path.basename(args[0]))
     d = {}
     for j in opts.json:

@@ -2,6 +2,12 @@
 /.ninja_log
 /index.html
 /resumecls/cv.tex
+/beamer/cv.tex
 _*
 *.log
 *.pdf
+*.aux
+*.nav
+*.out
+*.snm
+*.toc

@@ -1,3 +1,4 @@
+# Rules: #####################################################################
 
 rule cutreadme
   command = ./tools/cutreadme $in $out
@@ -11,11 +12,16 @@ rule cvrender
 rule cdpdflatex
   command = ./tools/cddo $in $$PWD/tools/latexer
 
-build resumecls/cv.tex: cvrender resumecls/cv.tex.jinja | lpenz.yml ./tools/jinja2-render
+# Builds: ####################################################################
 
+# resumecls view:
+build resumecls/cv.tex: cvrender   resumecls/cv.tex.jinja | lpenz.yml ./tools/jinja2-render
 build resumecls/cv.pdf: cdpdflatex resumecls/cv.tex | ./tools/cddo ./tools/latexer ./resumecls/resume.cls
 
+# beamer view:
+build beamer/cv.tex: cvrender   beamer/cv.tex.jinja | lpenz.yml ./tools/jinja2-render
+build beamer/cv.pdf: cdpdflatex beamer/cv.tex | ./tools/cddo ./tools/latexer
+
+# index page:
 build _readme.md: cutreadme README.md | ./tools/cutreadme
-
 build index.html: mdhtml _readme.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
-
