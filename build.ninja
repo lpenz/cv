@@ -22,6 +22,9 @@ build resumecls/cv.pdf: cdpdflatex resumecls/cv.tex | ./tools/cddo ./tools/latex
 build beamer/cv.tex: cvrender   beamer/cv.tex.jinja | lpenz.yml ./tools/jinja2-render
 build beamer/cv.pdf: cdpdflatex beamer/cv.tex | ./tools/cddo ./tools/latexer
 
+# orbit view:
+build orbit/cv.html: cvrender   orbit/cv.html.jinja | lpenz.yml ./tools/jinja2-render
+
 # index page:
 build _readme.md: cutreadme README.md | ./tools/cutreadme
 build index.html: mdhtml _readme.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html

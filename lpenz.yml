@@ -6,7 +6,7 @@ phone: +55 +51 9158 0600
 homepage: https://www.lpenz.org
 lattes: http://lattes.cnpq.br/0824061646899870
 aboutme: |
-    I'm currently working as an embedded software architect of DmOS ---
+    I'm currently working as an embedded software architect of DmOS -
     DATACOM's universal embedded OS. I focus on modularity, continuous
     integration, incremental qualification and DevOps. I work very closely with
     the DevOps team, bringing solutions and new technologies, and also helping
@@ -41,7 +41,7 @@ aboutme: |
 professional:
   - place: DATACOM
     job: Embedded software architect
-    period: 2014 -- present
+    period: 2014 - present
     description: |
       Software architect of DATACOM's embedded universal operating system: DmOS.
 
@@ -54,7 +54,7 @@ professional:
       - Alignment of the infrastructure with DmOS's requirements.
   - place: DATACOM
     job: Embedded software team leader
-    period: 2007 -- 2014
+    period: 2007 - 2014
     description: |
       Software Team Leader of Datacom's NG-SDH Multiplexer product line.
 
@@ -66,7 +66,7 @@ professional:
       - Full stack development
   - place: DATACOM
     job: Embedded software developer
-    period: 2002 -- 2007
+    period: 2002 - 2007
     description: |
       Team member of the first NG-SDH Multiplexer developed in Brazil.
 
@@ -77,8 +77,8 @@ professional:
         extension: Lua, Python and TCL (Expect).
 education:
   - place: Vale do Rio dos Sinos University (UNISINOS)
-    course: MBA --- Organizational Leadership and Management
-    period: 2012 -- 2013
+    course: MBA - Organizational Leadership and Management
+    period: 2012 - 2013
     description: |
       Modules:
 
@@ -89,7 +89,7 @@ education:
       - Organizational identity and culture
   - place: Federal University of Rio Grande do Sul (UFRGS)
     course: Master of Science, Computer Science
-    period: 2006--2008
+    period: 2006 - 2008
     description: |
       *Orientation*: Prof. Dr. Raul Fernando Weber  
       *Research line*: fault tolerance, network security and distributed systems.  
@@ -101,10 +101,10 @@ education:
 
   - place: Federal University of Rio Grande do Sul (UFRGS)
     course: Graduation, Electrical Engineering
-    period: 1998 -- 2002
+    period: 1998 - 2002
 
 courses:
-  - place: Pontifícia Universidade Católica --- RS
+  - place: Pontifícia Universidade Católica - RS
     course: "Agile methodologies: project management with SCRUM"
     period: 2009
     load: 12h
@@ -117,7 +117,7 @@ courses:
       Study of PMI's PMBOK.
 
   - place: UFRGS - Data processing center
-    course: TCP/IPv4 routing --- Internet high availability
+    course: TCP/IPv4 routing - Internet high availability
     period: 2003
     load: 16h
     description: |

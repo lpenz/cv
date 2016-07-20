@@ -9,6 +9,7 @@ My CV is available in the following formats, or layouts:
 
 - [resume.cls PDF](http://cv.lpenz.org/resumecls/cv.pdf)
 - [beamer presentation](http://cv.lpenz.org/beamer/cv.pdf)
+- [orbit](http://cv.lpenz.org/orbit/cv.html)
 
 
 ## Behind the scenes
