@@ -1,10 +1,10 @@
 ---
 name: Leandro Lisboa Penz
+user: lpenz
 email: lpenz@lpenz.org
 phone: +55 +51 9158 0600
 homepage: https://www.lpenz.org
 lattes: http://lattes.cnpq.br/0824061646899870
-stackoverflow: https://stackoverflow.com/cv/lpenz
 aboutme: |
     I'm currently working as an embedded software architect of DmOS ---
     DATACOM's universal embedded OS. I focus on modularity, continuous
@@ -134,7 +134,7 @@ random: |
   - I once got all questions right in a logical reasoning test. The psychologist
     that evaluated it said that she had never seen that before.
   - This CV is maintained at <http://github.com/lpenz/cv> with configuration
-    management, automated tests, continuous deployment
+    management, automated tests and continuous deployment
     to <http://cv.lpenz.org> in several output formats.
 
 languages:

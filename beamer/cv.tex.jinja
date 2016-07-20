@@ -10,14 +10,14 @@
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \input{brewer.tex}
-\newcommand{\myemph}[1]{{\color{dark27c1}\bf #1}}
-\newcommand{\myemphh}[1]{{\color{dark27c2}\bf #1}}
-\newcommand{\myemphhh}[1]{{\color{dark27c3}\bf #1}}
-\newcommand{\myemphhhh}[1]{{\color{dark27c4}\bf #1}}
-\newcommand{\myemphhhhh}[1]{{\color{dark27c5}\bf #1}}
-\newcommand{\myemphhhhhh}[1]{{\color{dark27c6}\bf #1}}
-\newcommand{\myemphhhhhhh}[1]{{\color{dark27c7}\bf #1}}
-\renewcommand{\emph}{\myemphhhhhhh}
+\newcommand{\myempha}[1]{{\color{dark27c1}\bf #1}}
+\newcommand{\myemphb}[1]{{\color{dark27c2}\bf #1}}
+\newcommand{\myemphc}[1]{{\color{dark27c3}\bf #1}}
+\newcommand{\myemphd}[1]{{\color{dark27c4}\bf #1}}
+\newcommand{\myemphe}[1]{{\color{dark27c5}\bf #1}}
+\newcommand{\myemphf}[1]{{\color{dark27c6}\bf #1}}
+\newcommand{\myemphg}[1]{{\color{dark27c7}\bf #1}}
+\renewcommand{\emph}{\myemphg}
 
 
 \title{CV of (((name)))}
@@ -42,8 +42,11 @@
     Email: \hfill \href{mailto:(((email)))}{(((email)))} \\
     Phone: \hfill (((phone))) \\
     Homepage: \hfill \url{(((homepage)))} \\
+    LinkedIn: \hfill \url{https://linkedin.com/in/(((user)))} \\
     Lattes CV: \hfill \url{(((lattes)))} \\
-    Stackoverflow CV: \hfill \url{(((stackoverflow)))}
+    GitHub: \hfill \url{https://github.com/(((user)))} \\
+    Twitter: \hfill \href{https://twitter.com/(((user)))}{@(((user)))} \\
+    Stack Overflow: \hfill \url{https://stackoverflow.com/cv/(((user)))}
 \end{frame}
 
 
@@ -60,10 +63,10 @@
 
 \subsection{(((p.job)))}
 \begin{frame}{(((p.job)))}
-    \myemph{(((p.place)))}
+    \myempha{(((p.place)))}
 
-    \myemphh{(((p.job)))} \\
-    \hfill \myemphhh{(((p.period)))}
+    \myemphb{(((p.job)))} \\
+    \hfill \myemphc{(((p.period)))}
 
     (((p.description | markdown)))
 \end{frame}
@@ -77,10 +80,10 @@
 
 \subsection{(((e.course)))}
 \begin{frame}{(((e.course)))}
-    \myemph{(((e.place)))}
+    \myempha{(((e.place)))}
 
-    \myemphh{(((e.course)))} \\
-    \hfill \myemphhh{(((e.period)))}
+    \myemphb{(((e.course)))} \\
+    \hfill \myemphc{(((e.period)))}
 
     (((e.description | markdown)))
 \end{frame}
@@ -93,7 +96,7 @@
 \begin{frame}{Languages}
     \begin{tabular}{rl}
         ((* for l in languages *))
-        \myemphhhhh{(((l.lang))):}&\myemphhhhhhh{(((l.skill)))}\\
+        \myemphe{(((l.lang))):}&\myemphg{(((l.skill)))}\\
         ((* endfor *))
     \end{tabular}
 \end{frame}
