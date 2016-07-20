@@ -27,7 +27,7 @@ def markdown_filter(value, language='latex'):
         'pandoc', '-S',
         '-f', 'markdown',
         '-t', language,
-        tmp.name])
+        tmp.name]).decode('UTF-8')
     tmp.close()
     return out
 
