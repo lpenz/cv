@@ -8,6 +8,7 @@ RUN set -x -e; \
         python-pip python-setuptools python-wheel \
         python-yaml python-jinja2 python-markdown \
         flake8 shellcheck \
+        linkchecker \
         vim time curl \
         ninja-build \
         texlive texlive-publishers texlive-pictures texlive-latex-extra \

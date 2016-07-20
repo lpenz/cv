@@ -17,3 +17,4 @@ build:
     - ninja -v
   on_success:
     - aws s3 sync --delete --exclude=.git/* . s3://cv.lpenz.org/
+    - linkchecker --check-extern http://cv.lpenz.org/
