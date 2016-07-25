@@ -20,7 +20,7 @@
 \renewcommand{\emph}{\myemphg}
 
 
-\title{CV of (((name)))}
+\title{(((name)))}
 \author{}
 \date{lpenz@lpenz.org}
 
@@ -89,6 +89,28 @@
 \end{frame}
 
 ((* endfor *))
+
+
+\section{Other courses}
+
+\begin{frame}{Other courses}
+((* for c in courses *))
+
+((* if not loop.first *))
+    \vspace{1em}
+    \hrule{}
+    \vspace{1em}
+((* endif *))
+
+    \myempha{(((c.place)))}
+
+    \myemphb{(((c.course)))} \\
+    \hfill \myemphc{(((c.period)))}
+
+    (((c.description | markdown)))
+
+((* endfor *))
+\end{frame}
 
 
 \section{Languages}
