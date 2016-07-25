@@ -1,9 +1,8 @@
 /.ninja_deps
 /.ninja_log
 /index.html
-/resumecls/cv.tex
-/beamer/cv.tex
-/orbit/cv.html
+cv.html
+cv.tex
 _*
 *.log
 *.pdf

@@ -22,6 +22,10 @@ build resumecls/cv.pdf: cdpdflatex resumecls/cv.tex | ./tools/cddo ./tools/latex
 build beamer/cv.tex: cvrender   beamer/cv.tex.jinja | lpenz.yml ./tools/jinja2-render
 build beamer/cv.pdf: cdpdflatex beamer/cv.tex | ./tools/cddo ./tools/latexer
 
+# moderncvclassic view:
+build moderncvclassic/cv.tex: cvrender   moderncvclassic/cv.tex.jinja | lpenz.yml ./tools/jinja2-render
+build moderncvclassic/cv.pdf: cdpdflatex moderncvclassic/cv.tex | ./tools/cddo ./tools/latexer
+
 # orbit view:
 build orbit/cv.html: cvrender   orbit/cv.html.jinja | lpenz.yml ./tools/jinja2-render
 
