@@ -123,7 +123,7 @@ courses:
     description: |
       Focused on network routing protocols: RIP, OSPF and BGP.
 
-random: |
+random:
   - I installed my first Debian GNU/Linux at home in 2003, and never reinstalled it
     from scratch. I use the "testing" release, and update it constantly.
   - I learned Haskell while developing the prototype of my MSc dissertation in 2006.

@@ -127,7 +127,11 @@
 \section{Misc}
 
 \begin{frame}[allowframebreaks]{Random anecdotes}
-    (((random | markdown)))
+    \begin{itemize}
+        ((* for r in random *))
+        \item (((r | markdown)))
+        ((* endfor *))
+    \end{itemize}
 \end{frame}
 
 

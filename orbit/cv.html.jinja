@@ -229,7 +229,11 @@
             <section class="skills-section section">
                 <h2 class="section-title"><i class="fa fa-thumbs-up"></i>Misc</h2>
 
-                (((random | markdown("html") )))
+                <ul>
+                    ((* for r in random *))
+                    <li>(((r | markdown("html") )))</li>
+                    ((* endfor *))
+                </ul>
             </section>
 
         </div><!--//main-body-->
