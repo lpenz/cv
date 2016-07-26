@@ -12,7 +12,7 @@ RUN set -x -e; \
         linkchecker \
         vim time curl \
         ninja-build \
-        texlive texlive-publishers texlive-pictures texlive-latex-extra cm-super \
+        texlive texlive-publishers texlive-pictures texlive-latex-extra texlive-fonts-extra cm-super \
         pandoc \
         awscli \
         gosu sudo
