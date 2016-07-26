@@ -10,11 +10,11 @@
 % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 \moderncvstyle{classic} % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{green}   % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{green} % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
-\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+%\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\tightlist}{}
 %\renewcommand{\familydefault}{\sfdefault} % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{} % uncomment to suppress automatic page numbering for CVs longer than one page
 
 \usepackage[utf8]{inputenc}
 
@@ -26,25 +26,17 @@
 % personal data
 \name{(((name)))}{}
 %\title{Resumé title}                               % optional, remove / comment the line if not wanted
-%\address{Rua Portuguesa, 162/405}{90650-120, Porto Alegre}{Brazil}
+%\address{street}{zip, city}{country}
 \email{(((email)))}
 \phone[mobile]{(((phone)))}
 \homepage{(((homepage)))}
 \social[linkedin]{(((user)))}
 \social[github]{(((user)))}
-\social[twitter][www.twitter.com/(((user)))]{@(((user)))}
-% Stack Overflow: \hfill \url{https://stackoverflow.com/cv/(((user)))}
-% Lattes CV: \hfill \url{(((lattes)))} \\
+\social[twitter][www.twitter.com/(((user)))]{(((user)))}
 
 %\extrainfo{additional information}
 %\photo[64pt][0.4pt]{lpenz.png}
 %\quote{Some quote}
-
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
 
 \begin{document}
 
@@ -52,27 +44,27 @@
 
 \section{About me}
 
-(((aboutme | markdown)))
+(((aboutme | markdown | regex('\\n\\n', '\n\n\\\\vspace{1em}\n') )))
 
 
 \section{Experience}
 
 ((* for p in professional *))
-\cventry{(((p.period)))}{(((p.job)))}{(((p.place)))}{}{}{(((p.description | markdown | regex('\\n','%\\n') )))}
+\cventry{(((p.period)))}{(((p.job)))}{(((p.place)))}{}{}{(((p.description | markdown | regex('\\n',' %\\n') )))}
 ((* endfor *))
 
 
 \section{Education}
 
 ((* for e in education *))
-\cventry{(((e.period)))}{(((e.course)))}{(((e.place)))}{}{}{(((e.description | markdown | regex('\\n','%\\n') )))}
+\cventry{(((e.period)))}{(((e.course)))}{(((e.place)))}{}{}{(((e.description | markdown | regex('\\n',' %\\n') )))}
 ((* endfor *))
 
 
 \section{Other courses}
 
 ((* for c in courses *))
-\cventry{(((c.period)))}{(((c.course)))}{(((c.place)))}{}{Course load: (((c.load)))}{(((c.description | markdown | regex('\\n','%\\n') )))}
+\cventry{(((c.period)))}{(((c.course)))}{(((c.place)))}{}{Course load: (((c.load)))}{(((c.description | markdown | regex('\\n',' %\\n') )))}
 ((* endfor *))
 
 
@@ -81,9 +73,6 @@
 ((* for l in languages *))
 \cvitemwithcomment{(((l.lang)))}{(((l.skill)))}{}
 ((* endfor *))
-
-
-\clearpage
 
 \section{Random achievements and anecdotes}
 ((* for r in random *))
