@@ -102,6 +102,10 @@ education:
   - place: Federal University of Rio Grande do Sul (UFRGS)
     course: Graduation, Electrical Engineering
     period: 1998 - 2002
+    description: |
+      The program is ranked among the top in Brazil, according to the
+      evaluation process carried out by the CAPES agency of the Brazilian
+      Ministry of Education.
 
 courses:
   - place: Pontifícia Universidade Católica - RS
