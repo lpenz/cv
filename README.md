@@ -27,7 +27,7 @@ namely:
 The structure of the data is as follows:
 
 - lpenz.yml: single data source in [YAML](http://yaml.org/).
-- build.nija: [ninja](https://ninja-build.org/) build system.
+- build.ninja: [ninja](https://ninja-build.org/) build system.
 - ...that are used to render my CV in the several different "views."
 
 
