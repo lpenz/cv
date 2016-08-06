@@ -46,6 +46,7 @@
 
 (((aboutme | markdown | regex('\\n\\n', '\n\n\\\\vspace{1em}\n') )))
 
+\clearpage
 
 \section{Experience}
 
@@ -53,6 +54,7 @@
 \cventry{(((p.period)))}{(((p.job)))}{(((p.place)))}{}{}{(((p.description | markdown | regex('\\n',' %\\n') )))}
 ((* endfor *))
 
+\clearpage
 
 \section{Education}
 
@@ -73,6 +75,8 @@
 ((* for l in languages *))
 \cvitemwithcomment{(((l.lang)))}{(((l.skill)))}{}
 ((* endfor *))
+
+\clearpage
 
 \section{Random achievements and anecdotes}
 ((* for r in random *))

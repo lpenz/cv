@@ -21,6 +21,7 @@ def markdown_filter(value, language='latex'):
     tmp = tempfile.NamedTemporaryFile()
     if language == 'latex':
         value = value.replace('~', '$\sim$')
+        value = re.sub('([^ ]) - ([^ ])', '\\1 --- \\2', value)
     tmp.write(value)
     tmp.flush()
     out = subprocess.check_output([
@@ -28,6 +29,9 @@ def markdown_filter(value, language='latex'):
         '-f', 'markdown',
         '-t', language,
         tmp.name]).decode('UTF-8')
+    if language == 'latex':
+        out = out.replace('\n\n\\begin{itemize}', '\n\\begin{itemize}')
+        out = out.replace('\n\n  \\begin{itemize}', '\n\\begin{itemize}')
     tmp.close()
     return out
 

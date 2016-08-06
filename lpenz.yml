@@ -6,11 +6,10 @@ phone: +55 +51 9158 0600
 homepage: https://www.lpenz.org
 lattes: http://lattes.cnpq.br/0824061646899870
 aboutme: |
-    I'm currently working as an embedded software architect of DmOS -
-    DATACOM's universal embedded OS. I focus on modularity, continuous
-    integration, incremental qualification and DevOps. I work very closely with
-    the DevOps team, bringing solutions and new technologies, and also helping
-    in general.
+    I'm currently working as an embedded software architect of DmOS - DATACOM's
+    universal embedded OS. I focus on modularity, continuous integration,
+    incremental qualification and DevOps. I work very closely with the DevOps
+    team, bringing solutions and new technologies, and also helping in general.
 
     I was one of the architects that worked on the initial definitions of the
     architecture, processes and tools used nowadays in the company. The
@@ -19,15 +18,16 @@ aboutme: |
     Before the creation of the architecture group, I led small (8) development
     teams. At first, I led teams of embedded software development for about 5
     years, as I started as a developer myself. I then led the test
-    infrastructure team for about a year before becoming a software architect.
+    infrastructure team for about a year while also acting as a software
+    architect for the Ethernet switch product line.
 
     I hold a master degree in computer science from UFRGS. My research line was
-    on computer networks, distributed systems and fault tolerance. My
+    on computer networks, distributed systems, fault tolerance and security. My
     dissertation was about distributed firewall rule coherence. I implemented
     the prototype checker in Haskell.
 
     I hold an MBA on management and leadership from UNISINOS. I graduated in
-    electrical engineering, also from UFRGS.
+    electrical engineering from UFRGS.
 
     I value technical excellence, out-of-the-box thinking, generalism, strategic
     planning and long-term maintainability. I'm always looking for
@@ -45,25 +45,53 @@ professional:
     description: |
       Software architect of DATACOM's embedded universal operating system: DmOS.
 
-      - Research and high-level definition the system architecture;
+      - Research and high-level definition the system architecture.
       - Design of the overall development process.
+      - A lot of code review.
+      - Coding of some core modules.
 
       Software architect assigned to DevOps.
 
-      - Initial tooling and structuring of the DevOps infrastructure;
+      - Initial tooling and structuring of the DevOps infrastructure.
+      - Definition of the DevOps process: homologation vs test vs production environments.
       - Alignment of the infrastructure with DmOS's requirements.
+      - Coding of some of the solutions.
   - place: DATACOM
-    job: Embedded software team leader
-    period: 2007 - 2014
+    job: Leader of test automation team; embedded software architect
+    period: 2012 - 2014
     description: |
-      Software Team Leader of Datacom's NG-SDH Multiplexer product line.
-
-      - Coordination of small teams (8) of embedded software developers.
-      - Guidance and reference in the development of solutions.
-
       Software Team Leader of Ethernet switch test automation team.
 
-      - Full stack development
+      - Coordination of the team that was responsible for:
+          - test development: in ruby;
+          - test excution: 24/7, in sync with product integration;
+          - test infrastructure maintenance: ~ 5 testbeds, most with Ethernet
+            ring topologies.
+      - Backlog and defect priorization.
+      - Agile methodologies.
+      - Performance evaluation, feedback.
+
+      Software architect of DATACOM's Ethernet switch product line:
+
+      - Evaluation and implementation of static analysis tools.
+      - Development of debugging tools.
+      - Overall development process enhancements.
+      - I was also heavily involed with the design and implementation of tools
+        that gathered data and generated development and defect metrics using
+        python and django, full stack.
+  - place: DATACOM
+    job: Leader of embedded software team
+    period: 2007 - 2011
+    description: |
+      Software team leader of DATACOM's NG-SDH Multiplexer product line.
+
+      - Coordination of distributed teams (~ 8, about half local, half remote) of
+        embedded software developers.
+      - Guidance and reference in the development of solutions.
+      - Backlog and defect priorization.
+      - Agile methodologies.
+      - Performance evaluation, feedback.
+      - A lot of code review.
   - place: DATACOM
     job: Embedded software developer
     period: 2002 - 2007
@@ -80,7 +108,7 @@ education:
     course: MBA - Organizational Leadership and Management
     period: 2012 - 2013
     description: |
-      Modules:
+      Subjects:
 
       - Business management
       - Project management

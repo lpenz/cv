@@ -7,8 +7,8 @@
 
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-\title{}
-\author{}
+\title{(((name)))}
+\author{(((name)))}
 \begin{document}
 
 \newcommand{\nl}[0]{\vspace{1mm}\\}
@@ -58,6 +58,10 @@
 
     ((* for e in education *))
 
+    ((* if loop.index == 2 *))
+    \clearpage
+    ((* endif *))
+
     \textbf{(((e.place)))} \nl{}
     \textsl{(((e.course)))} \hfill \textbf{(((e.period)))}
 
@@ -67,7 +71,6 @@
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    \clearpage
     \section{\mysidestyle Other courses}
 
     ((* for c in courses *))
