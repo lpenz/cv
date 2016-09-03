@@ -1,0 +1,79 @@
+
+.lpsection {
+   background: #fff;
+   padding-top: 90px;
+   padding-bottom: 72px;
+   overflow: hidden;
+}
+
+.lpsection a, .lpsection a:visited  { color: #11ABB0; }
+.lpsection a:hover, .lpsection a:focus { color: #313131; }
+
+.lpsection h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+.lpsection h1 span {
+   border-bottom: 3px solid #11ABB0;
+   padding-bottom: 6px;
+}
+.lpsection h3 {
+   font: 25px/30px 'opensans-bold', sans-serif;
+}
+
+.lpsection .header-col { padding-top: 9px; }
+.lpsection .main-col { padding-right: 10%; }
+
+.lpsection .info {
+   font: 16px/24px 'librebaskerville-italic', serif;
+   color: #6E7881;
+   margin-bottom: 18px;
+   margin-top: 9px;
+}
+.lpsection .info span {
+   margin-right: 5px;
+   margin-left: 5px;
+}
+.lpsection .date {
+   font: 15px/24px 'opensans-regular', sans-serif;
+   margin-top: 6px;
+}
+
+@media only screen and (max-width: 900px) {
+   .lpsection h1 { font: 16px/24px 'opensans-bold', sans-serif; }
+   .lpsection .main-col { padding-right: 5%; }   
+}
+@media only screen and (max-width: 767px) {
+   .lpsection .header-col {
+      padding-top: 0;
+      margin-bottom: 48px;
+      text-align: center;
+   }
+   .lpsection h1 { letter-spacing: 3px; }
+   .lpsection .main-col { padding-right: 30px; }
+   .lpsection h3, .lpsection .info { text-align: center; }
+      
+   .bars { width: 100%; }
+
+}
+
+div.columns > p {
+    margin: 0;
+}
+
+div.libullets > ul li:before {
+    content: "•";
+    padding-right: 8px;
+    font-weight: bold;
+    color: #11ABB0;
+    /* color: #F06000; */
+}
+
+div.pbullets > ul > li > p:before {
+    content: "•";
+    padding-right: 8px;
+    font-weight: bold;
+    color: #11ABB0;
+    /* color: #F06000; */
+}

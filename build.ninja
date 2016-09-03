@@ -29,6 +29,9 @@ build moderncvclassic/cv.pdf: cdpdflatex moderncvclassic/cv.tex | ./tools/cddo .
 # orbit view:
 build orbit/cv.html: cvrender   orbit/cv.html.jinja | lpenz.yml ./tools/jinja2-render
 
+# ceevee view:
+build ceevee/cv.html: cvrender  ceevee/cv.html.jinja | lpenz.yml ./tools/jinja2-render
+
 # index page:
 build _readme.md: cutreadme README.md | ./tools/cutreadme
 build index.html: mdhtml _readme.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
