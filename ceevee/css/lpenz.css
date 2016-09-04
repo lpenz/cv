@@ -20,6 +20,7 @@
 }
 .lpsection h3 {
    font: 25px/30px 'opensans-bold', sans-serif;
+   margin-top: 24px;
 }
 
 .lpsection .header-col { padding-top: 9px; }
