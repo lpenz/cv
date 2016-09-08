@@ -12,6 +12,9 @@ My CV is available in the following formats, or layouts:
 - [modern cv classic](http://cv.lpenz.org/moderncvclassic/cv.pdf) (PDF)
 - [resume.cls](http://cv.lpenz.org/resumecls/cv.pdf) (PDF)
 - [beamer](http://cv.lpenz.org/beamer/cv.pdf) (PDF)
+- [markdown](http://cv.lpenz.org/markdown/cv.md) (markdown) and two rendered versions:
+    - [plain text](http://cv.lpenz.org/markdown/cv.txt)
+    - [html](http://cv.lpenz.org/markdown/cv.html)
 
 
 ## Behind the scenes

@@ -1,0 +1,63 @@
+
+## Contact information
+
+-----             -----
+Email:            [(((email)))](mailto:(((email))))
+Phone:            [(((phone)))](tel:(((phone))))
+Homepage:         [(((homepage)))]( (((homepage))) )
+LinkedIn:         [https://linkedin.com/in/(((user)))/](https://linkedin.com/in/(((user)))/)
+GitHub:           [https://github.com/(((user)))/](https://github.com/(((user)))/)
+Twitter:          @[(((user)))](https://twitter.com/(((user)))/)
+Stack Overflow:   [https://stackoverflow.com/cv/(((user)))/](https://stackoverflow.com/cv/(((user)))/)
+-----             -----
+
+
+## About me
+
+(((aboutme)))
+
+
+## Experience
+
+((* for p in professional *))
+### (((p.period))) --- (((p.job))), *(((p.place)))*
+
+(((p.description)))
+
+
+((* endfor *))
+
+## Education
+
+((* for e in education *))
+### (((e.period))) --- (((e.course))), *(((e.place)))*
+
+(((e.description)))
+
+
+((* endfor *))
+
+## Other courses
+
+((* for c in courses *))
+- (((c.period))) --- **(((c.course)))**, *(((c.place)))*
+
+Load: (((c.load)))
+
+(((c.description)))
+
+
+((* endfor *))
+
+## Languages
+
+((* for l in languages *))
+- *(((l.lang)))*: (((l.skill)))
+((* endfor *))
+
+## Random achievements
+
+((* for r in random *))
+- (((r | markdown)))
+((* endfor *))
+

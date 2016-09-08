@@ -11,3 +11,5 @@ _*
 *.out
 *.snm
 *.toc
+/markdown/cv.md
+/markdown/cv.txt
