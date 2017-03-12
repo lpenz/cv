@@ -2,7 +2,6 @@
 name: Leandro Lisboa Penz
 user: lpenz
 email: lpenz@lpenz.org
-phone: +55 +51 9158 0600
 homepage: http://www.lpenz.org
 lattes: http://lattes.cnpq.br/0824061646899870
 aboutme: |
@@ -39,9 +38,14 @@ aboutme: |
     similarities (briefing/debriefing ~ sprint planning/review).
 
 professional:
+  - place: Arista Networks
+    job: Software engineer
+    period: 2016 - present
+    description: |
+
   - place: DATACOM
     job: Embedded software architect
-    period: 2014 - present
+    period: 2014 - 2016
     description: |
       Software architect of DATACOM's embedded universal operating system: DmOS.
 
