@@ -1,31 +1,21 @@
-FROM ubuntu:16.04
+FROM nixos/nix
 MAINTAINER Leandro Lisboa Penz <lpenz@lpenz.org>
 
-# install debian packages:
-ENV DEBIAN_FRONTEND noninteractive
 RUN set -x -e; \
-    apt-get update; \
-    apt-get install -y --no-install-recommends \
-        python-pip python-setuptools python-wheel \
-        python-yaml python-jinja2 python-markdown \
-        flake8 shellcheck \
-        linkchecker \
-        vim time curl \
-        ninja-build \
-        texlive texlive-publishers texlive-pictures texlive-latex-extra texlive-fonts-extra cm-super \
-        pandoc \
-        awscli \
-        gosu sudo
+    nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs; \
+    nix-channel --update; \
+    nix-env -i shadow su-exec; \
+    true
 
-# setup sudo
-RUN set -x -e; \
-    echo 'ALL ALL=NOPASSWD:ALL' > /etc/sudoers.d/all; \
-    chmod 0400 /etc/sudoers.d/all
+COPY default.nix /
 
-# install pip packages:
+# RUN set -x -e; \
+#     df -h; \
+#     nix-shell --command true; \
+#     true
+
 RUN set -x -e; \
-    pip install \
-        py3kwarn==0.4.4
+    mkdir /target
 
 # setup entrypoint with user UID/GID from host
 RUN set -x -e; \
@@ -33,17 +23,18 @@ RUN set -x -e; \
     echo '#!/bin/bash'; \
     echo 'MY_UID=${MY_UID:-1000}'; \
     echo 'set -x -e'; \
-    echo 'useradd -M -u "$MY_UID" -o user'; \
-    echo 'chown user:user /home/user'; \
-    echo 'cd /home/user/work'; \
-    echo 'exec gosu user "${@:-/bin/bash}"'; \
+    echo 'adduser -D -u "$MY_UID" user'; \
+    echo 'chown -R user:user /home/user /target'; \
+    echo 'echo . /nix/var/nix/profiles/default/etc/profile.d/nix.sh >> /home/user/.bashrc'; \
+    echo 'cd /target'; \
+    echo 'exec su-exec user "${@:-/bin/bash -i}"'; \
     ) > /usr/local/bin/entrypoint.sh; \
     chmod a+x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
-CMD ["ninja","-v"]
+CMD ["nix-build","-v"]
 
 # If your UID is 1000, you can simply run the container as
-# docker run -it --rm -v $PWD:/home/user/work cv
+# docker run -it --rm -v $PWD:/target cv
 # otherwise, run it as:
-# docker run -it --rm -v $PWD:/home/user/work -e MY_UID=$UID cv
+# docker run -it --rm -v $PWD:/target -e MY_UID=$UID cv
