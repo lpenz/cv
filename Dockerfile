@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM debian:stretch
 MAINTAINER Leandro Lisboa Penz <lpenz@lpenz.org>
 
 # install debian packages:
