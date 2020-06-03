@@ -20,15 +20,13 @@ def markdown_filter(value, language='latex'):
         return ''
     tmp = tempfile.NamedTemporaryFile()
     if language == 'latex':
-        value = value.replace('~', '$\sim$')
+        value = value.replace('~', '$\\sim$')
         value = re.sub('([^ ]) - ([^ ])', '\\1 --- \\2', value)
     tmp.write(value)
     tmp.flush()
-    out = subprocess.check_output([
-        'pandoc', '-S',
-        '-f', 'markdown',
-        '-t', language,
-        tmp.name]).decode('UTF-8')
+    out = subprocess.check_output(
+        ['pandoc', '-S', '-f', 'markdown', '-t', language,
+         tmp.name]).decode('UTF-8')
     if language == 'latex':
         out = out.replace('\n\n\\begin{itemize}', '\n\\begin{itemize}')
         out = out.replace('\n\n  \\begin{itemize}', '\n\\begin{itemize}')
@@ -43,20 +41,38 @@ def regex_filter(value, match, replace):
 def main():
     parser = OptionParser(usage="Usage: %prog <src.jinja>",
                           description=__doc__)
-    parser.add_option('-j', '--json',
-                      dest='json', type='string', action='append', default=[],
+    parser.add_option('-j',
+                      '--json',
+                      dest='json',
+                      type='string',
+                      action='append',
+                      default=[],
                       help='Use the provided json as data.')
-    parser.add_option('-y', '--yaml',
-                      dest='yaml', type='string', action='append', default=[],
+    parser.add_option('-y',
+                      '--yaml',
+                      dest='yaml',
+                      type='string',
+                      action='append',
+                      default=[],
                       help='Use the provided yaml as data.')
-    parser.add_option('-s', '--set',
-                      dest='set', type='string', action='append', default=[],
+    parser.add_option('-s',
+                      '--set',
+                      dest='set',
+                      type='string',
+                      action='append',
+                      default=[],
                       help='Set an individual data value.')
-    parser.add_option('-o', '--output',
-                      dest='output', type='string', default=None,
+    parser.add_option('-o',
+                      '--output',
+                      dest='output',
+                      type='string',
+                      default=None,
                       help='Output to the passed file.')
-    parser.add_option('-t', '--template-directory',
-                      dest='tdir', action='append', default=[],
+    parser.add_option('-t',
+                      '--template-directory',
+                      dest='tdir',
+                      action='append',
+                      default=[],
                       help='Use the given directory for tempates.')
     (opts, args) = parser.parse_args()
     if len(args) != 1:
@@ -87,12 +103,12 @@ def main():
         d[k] = v
     o = sys.stdout
     if opts.output:
-        o = codecs.open(opts.output + '.tmp', 'w',
-                        'UTF-8')
+        o = codecs.open(opts.output + '.tmp', 'w', 'UTF-8')
     t.stream(d).dump(o)
     if opts.output:
         o.close()
         os.rename(opts.output + '.tmp', opts.output)
+
 
 if __name__ == '__main__':
     main()
