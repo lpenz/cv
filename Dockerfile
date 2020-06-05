@@ -7,7 +7,7 @@ RUN set -e -x; \
     apt-get install -y --no-install-recommends \
         pandoc ninja-build \
         texlive texlive-latex-extra cm-super \
-        python-yaml python-jinja2 \
+        python3-yaml python3-jinja2 \
         locales
 
 # setup su and locale
