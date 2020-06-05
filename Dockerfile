@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 MAINTAINER Leandro Lisboa Penz <lpenz@lpenz.org>
 
 ENV DEBIAN_FRONTEND noninteractive

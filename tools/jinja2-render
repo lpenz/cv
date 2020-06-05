@@ -25,7 +25,7 @@ def markdown_filter(value, language='latex'):
     tmp.write(value)
     tmp.flush()
     out = subprocess.check_output(
-        ['pandoc', '-S', '-f', 'markdown', '-t', language,
+        ['pandoc', '-f', 'markdown', '-t', language,
          tmp.name]).decode('UTF-8')
     if language == 'latex':
         out = out.replace('\n\n\\begin{itemize}', '\n\\begin{itemize}')
