@@ -1,5 +1,5 @@
 FROM debian:buster
-MAINTAINER Leandro Lisboa Penz <lpenz@lpenz.org>
+LABEL maintainer="Fernando Luz <prof.fernando.luz@gmail.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN set -e -x; \

@@ -1,7 +1,7 @@
 with import <nixpkgs> {};
 
 stdenv.mkDerivation rec {
-  name = "lpenz-cv";
+  name = "fluz-cv";
 
   src = ./.;
 
