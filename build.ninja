@@ -17,33 +17,36 @@ rule cdpdflatex
 
 # Builds: ####################################################################
 
-# resumecls view:
-build resumecls/cv.tex: cvrender   resumecls/cv.tex.jinja | fluz.yml ./tools/jinja2-render
-build resumecls/cv.pdf: cdpdflatex resumecls/cv.tex | ./tools/cddo ./tools/latexer ./resumecls/resume.cls
+# DevResume view:
+build DevResume/cv.html: cvrender DevResume/cv.html.jinda | fluz.yml ./tools/jinda2-render
 
-# beamer view:
-build beamer/cv.tex: cvrender   beamer/cv.tex.jinja | fluz.yml ./tools/jinja2-render
-build beamer/cv.pdf: cdpdflatex beamer/cv.tex | ./tools/cddo ./tools/latexer
+// # resumecls view:
+// build resumecls/cv.tex: cvrender   resumecls/cv.tex.jinja | fluz.yml ./tools/jinja2-render
+// build resumecls/cv.pdf: cdpdflatex resumecls/cv.tex | ./tools/cddo ./tools/latexer ./resumecls/resume.cls
 
-# moderncvclassic view:
-build moderncvclassic/cv.tex: cvrender   moderncvclassic/cv.tex.jinja | fluz.yml ./tools/jinja2-render
-build moderncvclassic/cv.pdf: cdpdflatex moderncvclassic/cv.tex | ./tools/cddo ./tools/latexer
+// # beamer view:
+// build beamer/cv.tex: cvrender   beamer/cv.tex.jinja | fluz.yml ./tools/jinja2-render
+// build beamer/cv.pdf: cdpdflatex beamer/cv.tex | ./tools/cddo ./tools/latexer
 
-# orbit view:
-build orbit/cv.html: cvrender   orbit/cv.html.jinja | fluz.yml ./tools/jinja2-render
+// # moderncvclassic view:
+// build moderncvclassic/cv.tex: cvrender   moderncvclassic/cv.tex.jinja | fluz.yml ./tools/jinja2-render
+// build moderncvclassic/cv.pdf: cdpdflatex moderncvclassic/cv.tex | ./tools/cddo ./tools/latexer
 
-# ceevee view:
-build ceevee/cv.html: cvrender  ceevee/cv.html.jinja | fluz.yml ./tools/jinja2-render
+// # orbit view:
+// build orbit/cv.html: cvrender   orbit/cv.html.jinja | fluz.yml ./tools/jinja2-render
 
-# markdown view:
-build markdown/cv.md: cvrender  markdown/cv.md.jinja | fluz.yml ./tools/jinja2-render
+// # ceevee view:
+// build ceevee/cv.html: cvrender  ceevee/cv.html.jinja | fluz.yml ./tools/jinja2-render
 
-# markdown-html view:
-build markdown/cv.html: mdhtml markdown/cv.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
+// # markdown view:
+// build markdown/cv.md: cvrender  markdown/cv.md.jinja | fluz.yml ./tools/jinja2-render
 
-# markdown-txt view:
-build markdown/cv.txt: mdtxt markdown/cv.md
+// # markdown-html view:
+// build markdown/cv.html: mdhtml markdown/cv.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
 
-# index page:
-build _readme.md: cutreadme README.md | ./tools/cutreadme
-build index.html: mdhtml _readme.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
+// # markdown-txt view:
+// build markdown/cv.txt: mdtxt markdown/cv.md
+
+// # index page:
+// build _readme.md: cutreadme README.md | ./tools/cutreadme
+// build index.html: mdhtml _readme.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
