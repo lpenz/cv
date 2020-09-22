@@ -14,20 +14,25 @@ import tempfile
 import yaml
 
 def markdown_filter(value, language='latex'):
+
     if not value:
         return ''
-    tmp = tempfile.NamedTemporaryFile(mode='w+', encoding='utf-8')
+
+    tmp = tempfile.NamedTemporaryFile(mode='w+', encoding='utf-8', delete=False)
+
     if language == 'latex':
         value = value.replace('~', '$\\sim$')
         value = re.sub('([^ ]) - ([^ ])', '\\1 --- \\2', value)
+
     tmp.write(value)
     tmp.flush()
-    out = subprocess.check_output(
-        ['pandoc', '-f', 'markdown', '-t', language, tmp.name]).decode('UTF-8')
+    out = subprocess.check_output(['pandoc', '-f', 'markdown', '-t', language, tmp.name]).decode('UTF-8')
+
     if language == 'latex':
         out = out.replace('\n\n\\begin{itemize}', '\n\\begin{itemize}')
         out = out.replace('\n\n  \\begin{itemize}', '\n\\begin{itemize}')
     tmp.close()
+
     return out
 
 def regex_filter(value, match, replace):
@@ -42,12 +47,15 @@ def main():
     parser.add_option('-o', '--output', dest='output', type='string', default=None, help='Output to the passed file.')
     parser.add_option('-t', '--template-directory', dest='tdir', action='append', default=[], help='Use the given directory for tempates.')
     (opts, args) = parser.parse_args()
+
     if len(args) != 1:
         parser.error('Invalid arguments.')
+
     if opts.tdir:
         dirs = opts.tdir
     else:
         dirs = [os.path.dirname(args[0])]
+
     env = Environment(loader=FileSystemLoader(dirs))
     env.block_start_string = '((*'
     env.block_end_string = '*))'
@@ -57,21 +65,28 @@ def main():
     env.comment_end_string = '=))'
     env.filters['markdown'] = markdown_filter
     env.filters['regex'] = regex_filter
-    t = env.get_template(os.path.basename(args[0]))
-    d = {}
+
+    jinja_template = env.get_template(os.path.basename(args[0]))
+
+    cv_data = {}
+
     for j in opts.json:
         with open(j) as fd:
-            d.update(json.load(fd))
+            cv_data.update(json.load(fd))
+
     for y in opts.yaml:
         with open(y) as fd:
-            d.update(yaml.load(fd))
+            cv_data.update(yaml.load(fd, Loader=yaml.FullLoader))
+
     for e in opts.set:
         (k, v) = e.split('=')
-        d[k] = v
+        cv_data[k] = v
     o = sys.stdout
+
     if opts.output:
         o = codecs.open(opts.output + '.tmp', 'w', 'UTF-8')
-    t.stream(d).dump(o)
+    jinja_template.stream(cv_data).dump(o)
+
     if opts.output:
         o.close()
         os.rename(opts.output + '.tmp', opts.output)
