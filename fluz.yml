@@ -8,16 +8,26 @@ email: prof.fernando.luz@gmail.com
 homepage: tbd
 city: Porto
 country: Portugal
+maps_link: https://goo.gl/maps/SB8WgUCdqnM13S7U6
+github: https://github.com/fluz
 linkedin: https://www.linkedin.com/in/f-luz/
+hackerrank: https://www.hackerrank.com/fernando_luz
 lattes: http://lattes.cnpq.br/ # TODO: Need to put the correct value here
 aboutme: |
-  I am a developer with a Ph.D. in High-Performance Computing (HPC) and with over 10 years of experience in C++/C developing numerical models and simulators.
+  **12+ years** of developing and working in projects led me to have hands-on experience solving **complex problems** in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven **self-starter** and **fast learner**, always supporting my development teams with **top-notch coding skills**. In my last project **I lead** a pilot project to migrate around **400 test cases** with a constraints of **10 weeks** with **100% achievement**.
+
+aboutme_generic: |
+  12+ years of developing and working in projects led me to have hands-on experience solving complex problems in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven self-starter and fast learner, always supporting my development teams with top-notch coding skills. In my last project I lead a pilot project to migrate around 400 test cases with a constraints of 10 weeks with 100% achievement.
+
+aboutme_bkp: |
+  I am a developer with a Ph.D. in High-Performance Computing (HPC) and with over 10 years of experience in **C++/C** developing numerical models and simulators.
 
   All these years that I have been working in development led me to have hands-on experience solving complex problems in software development using several languages and software such as C++/C in numerical simulations, MongoDB to use for persistent memory for applications, Python to integrate different software, C# and Unity 3D to provide a immersive simulation environment, CMake/CDash to provide a cross-compile environment and test the code at the repository and Bash tools to automate the tasks in the Linux.
 
   As a team leader, what most motivated me was the challenge to maintain team cooperation to reach objectives in the process development. I have the experience to implement a Scrum/Kanban methodology, to share my knowledge with my colleagues and I believe programming requires writing skills so I do my best to write clear and good code and follow best practices.
 
   I was one of the founders in the Meetup group in Altran PT, and currently I am coordinator of Meetup sessions.
+
 
 aboutme_old: |
     I'm currently working as an embedded software architect of DmOS - DATACOM's
@@ -53,179 +63,97 @@ aboutme_old: |
     similarities (briefing/debriefing ~ sprint planning/review).
 
 professional:
-  - place: Altran Portugal / ASML NL
-    job: Senior Software Engineer
-    project: UTTK to ATTEST migration Team
-    period: 2020 - present
+  - company: Altran
+    position: Senior Software Engineer
+    period: 2020 - Present
+    description: |
+      I was responsible to start the ASML project, where firstly I collaborated to apply the Variant Patterning in the robot component for the next generation of lithography machines(EXE-5000), and currently I'm leading the Portugal team to improve the quality of unit tests using gtest.
+
+      Achievements / Tasks:
+    achievements:
+      - item: Complete implementation for RYUN (Universal Pick and Place Robot) component;
+      - item: Unit tests for RYUN (ATTEST/gtest) providing a 100% of coverage;
+      - item: Migration of RYAU component to RYAULE (legacy version);
+      - item: Scope analysis of RYAU autotesters, where I found a 65% of fake tests (tests without implementation);
+      - item: Delivery with success the first phase for UTTK to ATTEST migration (~400 tests in 10 weeks);
+
+  - company: Technomar Eng.
+    position: IT Manager
+    period: 2016 - 2018
     description: |  
-      To be describe, points to be cited
-      - both uses gtest;
-      - new framework
-      - lead portugal team
-      - define the standard for DWDC component
-      - Valgrind analysis
-      - Code refactoring
+      I managed the team responsible for developing a new version of vessel maneuver
+      simulator for maritime offshore operations and ports to be used in training activities.
+      The objective was to obtain a certified simulator by DNV agency with an advanced
+      hydrodynamic numerical model applied in a "full bridge" simulator.
+      I implemented good practices in the software development process such as
+      Scrum/Kanban methodology, TDD, some git good practices and local meetups to
+      homogenize the team knowledge.
+      I planned a full redesign of the main simulator, aims to improve the performance,
+      readability and the maintenance. This refactoring was necessary to start a
+      certification process with DNV. I adopt the Gitlab philosophy to define metrics for
+      all projects, and stimulate all team members to use these tools, I manage the
+      sprints, daily meetups and backlogs to all projects. At last, I create a communication
+      channel between the end user and the development team to provide a fast feedback
+      to customer needs.
 
-  - place: Altran Portugal / ASML US
-    job: Senior Software Engineer
-    project: ASML OVR (Out of Vacuum Robot) Team
-    period: 2019 - 2020
+  - company: Numerical Offshore Tank
+    position: Researcher / HPC Soft. Eng.
+    period: 2008 - 2016
     description: |  
-      At ASML OVR team, I participate in the process to adapt OVR components for the next lithography machine generation (EXE-5000) applying the Variant Pattern, i.e., convert the old components as a legacy and providing the new implementation.
+      My role in this laboratory was to develop a set of applications with High-Performance
+      Computing. The languages used to do this was C++/C, Python, MPI/sockets
+      and bash in a Linux Cluster environment. Other responsibilities include testing
+      and validation of numerical simulations, optimization, improvements of parallel
+      implementations and integration with other projects.
+      I worked in several others projects including the first version of vessel maneuver
+      simulator called SMH. This project was select as finalist of ANP (National Petroleum
+      Agency) Prize Award for Technological Innovation in 2016.
 
-      Some achievements I reached in this project:
-
-      - Migration of RYAU component to RYAULE (legacy version);
-      - Scope analysis of RYAU autotesters, where I found a 65% of dummy tests (tests without any implementation);
-      - Implementation for Staubli and Sankyo robots;
-      - Documentation for some components;
-      - Implementation for an abstract component RYUN;
-      - Test implementation for RYUN using ATTEST providing a 100% of coverage.
-
-  - place: Altran Portugal / Edwards Vacuum Pump
-    job: Senior Software Engineer
-    project: Edwards Vacuum Team
-    period: 2018 - 2018
+  - company: Paulista University
+    position: Graduate Full Professor
+    period: 2011 - 2016
     description: |  
-      At Edwards team, I participate in one development sprint, where I just understand more about the working process applied in this team. I started understanding the tools used, the review process, the daily meetings, and the development environment setup process.
-
-      Some tasks I did in this period:
-
-      - Initial comprehension of PICS module;
-      - Writing some bash scripts for spreadsheet translation to XML file;
-      - Create an embedded developer station;
-      - Initial setup and comprehension and of UI developer station.
-
-  - place: Altran Portugal
-    job: Senior Software Engineer
-    period: 2018 - present
-    description: |  
-
-  - place: Altran Portugal
-    job: Senior Software Engineer
-    period: 2018 - present
-    description: |  
-
-  - place: Altran Portugal
-    job: Senior Software Engineer
-    period: 2018 - present
-    description: |  
-
-  # - place: DATACOM
-  #   job: Embedded software architect
-  #   period: 2014 - 2016
-  #   description: |
-  #     Software architect of DATACOM's embedded universal operating system: DmOS.
-
-  #     - Research and high-level definition the system architecture.
-  #     - Design of the overall development process.
-  #     - A lot of code review.
-  #     - Coding of some core modules.
-
-  #     Software architect assigned to DevOps.
-
-  #     - Initial tooling and structuring of the DevOps infrastructure.
-  #     - Definition of the DevOps process: homologation vs test vs production environments.
-  #     - Alignment of the infrastructure with DmOS's requirements.
-  #     - Coding of some of the solutions.
-  # - place: DATACOM
-  #   job: Leader of test automation team; embedded software architect
-  #   period: 2012 - 2014
-  #   description: |
-  #     Software Team Leader of Ethernet switch test automation team.
-
-  #     - Coordination of the team that was responsible for:
-  #         - test development: in ruby;
-  #         - test excution: 24/7, in sync with product integration;
-  #         - test infrastructure maintenance: ~ 5 testbeds, most with Ethernet
-  #           ring topologies.
-  #     - Backlog and defect priorization.
-  #     - Agile methodologies.
-  #     - Performance evaluation, feedback.
-
-  #     Software architect of DATACOM's Ethernet switch product line:
-
-  #     - Evaluation and implementation of static analysis tools.
-  #     - Development of debugging tools.
-  #     - Overall development process enhancements.
-  #     - I was also heavily involed with the design and implementation of tools
-  #       that gathered data and generated development and defect metrics using
-  #       python and django, full stack.
-  # - place: DATACOM
-  #   job: Leader of embedded software team
-  #   period: 2007 - 2011
-  #   description: |
-  #     Software team leader of DATACOM's NG-SDH Multiplexer product line.
-
-  #     - Coordination of distributed teams (~ 8, about half local, half remote) of
-  #       embedded software developers.
-  #     - Guidance and reference in the development of solutions.
-  #     - Backlog and defect priorization.
-  #     - Agile methodologies.
-  #     - Performance evaluation, feedback.
-  #     - A lot of code review.
-  # - place: DATACOM
-  #   job: Embedded software developer
-  #   period: 2002 - 2007
-  #   description: |
-  #     Team member of the first NG-SDH Multiplexer developed in Brazil.
-
-  #     - Software development using the C linguage for embedded Linux
-  #       systems: network servers, debug tools and drivers (kernel space).
-  #     - Unix server administration and maintenance.
-  #     - Script development (test automation) and scripting language
-  #       extension: Lua, Python and TCL (Expect).
+      Teaching-related responsibilities. Presented the following lectures: Operating
+      System, Open Operating System, Topics inWeb Development, Software Engineering,
+      Language Paradigms, Programming Logic and Algorithms, Artificial Intelligence,
+      Distributed System.
+  
 education:
-  - place: Vale do Rio dos Sinos University (UNISINOS)
-    course: MBA - Organizational Leadership and Management
-    period: 2012 - 2013
-    description: |
-      Subjects:
+  - university: University of São Paulo (USP)
+    institute: Polytechnic School
+    title: Ph.D. in Science
+    period: 2010 - 2015
+    theme: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
+    scholarship: FUSP - University of São Paulo Foundation
+  - university: University of São Paulo (USP)
+    institute: Physics Institute of São Carlos
+    title: M.Sc. in Applied Physics
+    period: 2006 - 2010
+    theme: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
+    scholarship: CNPq - National Council for Scientific and Technological Development
+  - university: University of São Paulo (USP)
+    institute: Physics Institute of São Carlos
+    title: B.Sc. in Physics
+    period: 2001 - 206
 
-      - Business management
-      - Project management
-      - Human resources
-      - Leadership
-      - Organizational identity and culture
-  - place: Federal University of Rio Grande do Sul (UFRGS)
-    course: Master of Science, Computer Science
-    period: 2006 - 2008
-    description: |
-      *Orientation*: Prof. Dr. Raul Fernando Weber  
-      *Research line*: fault tolerance, network security and distributed systems.  
-      *Dissertation*: Coherence in distributed packet filters  
-      Formal definition of the concept of anomaly in isolated and distributed
-      network packet filters through the use of graphs and set theory.
-      Development of a prototype anomaly checker in Haskell.  
-      *Online*: <http://www.lume.ufrgs.br/handle/10183/22813>
+certification:
+  - school: Free Code Camp
+    course: Responsive Web Design
+    period: 2020
+    load: ~300h
+    credential: https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/responsive-web-design
 
-  - place: Federal University of Rio Grande do Sul (UFRGS)
-    course: Graduation, Electrical Engineering
-    period: 1998 - 2002
-    description: |
-      The program is ranked among the top in Brazil, according to the
-      evaluation process carried out by the CAPES agency of the Brazilian
-      Ministry of Education.
+  - school: Free Code Camp
+    course: JavaScript Algorithms and Data Structures
+    period: 2020
+    load: ~300h
+    credential: https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/javascript-algorithms-and-data-structures
 
-courses:
-  - place: Pontifícia Universidade Católica - RS
-    course: "Agile methodologies: project management with SCRUM"
-    period: 2009
-    load: 12h
-
-  - place: Vale do Rio dos Sinos University (UNISINOS)
-    course: Software project management
-    period: 2006
-    load: 21h
-    description: |
-      Study of PMI's PMBOK.
-
-  - place: UFRGS - Data processing center
-    course: TCP/IPv4 routing - Internet high availability
-    period: 2003
-    load: 16h
-    description: |
-      Focused on network routing protocols: RIP, OSPF and BGP.
+  - school: Free Code Camp
+    course: Scientific Computing with Python
+    period: 2020
+    load: ~400h
+    credential: https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/scientific-computing-with-python-v7
 
 random:
   - I installed my first Debian GNU/Linux at home in 2003, and never reinstalled it
@@ -241,8 +169,47 @@ random:
     management, automated tests and continuous deployment
     to <http://cv.lpenz.org> in several output formats.
 
-languages:
+language:
   - lang: Portuguese
     skill: Native
   - lang: English
     skill: Fluent
+
+technical_skills:
+  - skill: C++
+    level: 9
+  - skill: bash
+    level: 10
+  - skill: Python
+    level: 8
+  - skill: JavaScript
+    level: 7
+  - skill: C
+    level: 7
+  - skill: C#
+    level: 4
+  - skill: SML
+    level: 7
+  - skill: HTML
+    level: 7
+  - skill: CSS
+    level: 7
+  - skill: Matlab
+    level: 6
+  - skill: MongoDB
+    level: 5
+  - skill: Lead and deliver complex software systems
+    level: 7
+  - skill: Object-oriented design
+    level: 7
+  - skill: Design Patterns
+    level: 7
+  - skill: Functional Paradigm
+    level: 7
+
+professional_skills:
+  - skill: Team player
+  - skill: Problem Solver
+  - skill: Ownership
+  - skill: Time management
+  - skill: Build solutions
