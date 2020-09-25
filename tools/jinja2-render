@@ -71,11 +71,11 @@ def main():
     cv_data = {}
 
     for j in opts.json:
-        with open(j) as fd:
+        with open(j, encoding='utf8') as fd:
             cv_data.update(json.load(fd))
 
     for y in opts.yaml:
-        with open(y) as fd:
+        with open(y, encoding='utf8') as fd:
             cv_data.update(yaml.load(fd, Loader=yaml.FullLoader))
 
     for e in opts.set:
