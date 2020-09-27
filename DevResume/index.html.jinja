@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+	<title>(((name))) Resume</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="(((meta_description)))">
+	<meta name="author" content="(((name)))">    
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+	<link rel="shortcut icon" href="favicon.ico"> 
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+	<!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+	<!-- Theme CSS -->  
+	<link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
+
+</head> 
+
+<body>
+	
+	<div class="main-wrapper">
+		<div class="container px-3 px-lg-5">
+			<article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
+				
+				<div class="resume-header">
+					<div class="row align-items-center">
+						<div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
+							<h2 class="resume-name mb-0 text-uppercase">(((name)))</h2>
+							<div class="resume-tagline mb-3 mb-md-0">(((profession)))</div>
+						</div><!--//resume-title-->
+						<div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
+							<ul class="list-unstyled mb-0">
+								<li class="mb-2"><i class="fas fa-envelope-square fa-fw fa-lg mr-2"></i><a class="resume-link" href="mailto:(((email)))" target="_blank">(((email)))</a></li>
+								<li class="mb-2"><i class="fab fa-linkedin fa-fw fa-lg mr-2"></i><a class="resume-link" href="(((linkedin)))" target="_blank">(((linkedin)))</a></li>
+								<li class="mb-2"><i class="fab fa-github fa-fw fa-lg mr-2"></i><a class="resume-link" href="(((github)))" target="_blank">(((github)))</a></li>
+								<li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg mr-2"></i><a class="resume-link" href="(((maps_link)))" target="_blank">(((city))) - (((country)))</a></li>
+							</ul>
+						</div><!--//resume-contact-->
+					</div><!--//row-->
+					
+				</div><!--//resume-header-->
+				<hr>
+				<div class="resume-intro py-3">
+					<div class="media flex-column flex-md-row align-items-center">
+						<img class="resume-profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded-circle mx-auto" src="assets/images/resume-profile-fluz.jpg" alt="image Fernando Luz">
+						<div class="media-body text-justify">
+							<p class="mb-0">((( aboutme | markdown("html") )))</p>
+						</div><!--//media-body-->
+					</div>
+				</div><!--//resume-intro-->
+				<hr>
+				<div class="resume-body">
+					<div class="row">
+						<div class="resume-main col-12 col-lg-8 col-xl-9 pr-0 pr-lg-5">
+							<section class="work-section py-3">
+								<h3 class="text-uppercase resume-section-heading mb-4">Work Experiences</h3>
+								((* for p in professional *))
+								<div class="item mb-3">
+									<div class="item-heading row align-items-center mb-2">
+										<h4 class="item-title col-12 col-md-12 col-lg-12 mb-2 mb-md-0">((( p.position )))</h4>
+										<div class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">(((p.company)))</div>
+										<div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-left text-md-right"> ((( p.period ))) </div>
+									</div>
+									<div class="item-content text-justify">
+										<p>((( p.description | markdown("html") )))</p>
+                    ((*if p.achievements *))
+                    <p>Achievements / Tasks:</p>
+										<ul class="resume-list">
+										  ((* for a in p.achievements *))
+											<li>((( a.item | markdown("html") )))</li>
+										  ((* endfor *))
+										</ul>
+                    ((* endif *))
+									</div>
+								</div>
+								<!--//item-->
+								((* endfor *))
+							</section><!--//work-section-->
+
+							((* if project *))
+							<section class="project-section py-3">
+								<h3 class="text-uppercase resume-section-heading mb-4">Projects</h3>
+								<div class="item mb-3">
+									<div class="item-heading row align-items-center mb-2">
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Project Lorem Ipsum</h4>
+										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">Open Source</div>
+										
+									</div>
+									<div class="item-content">
+										<p>You can use this section for your side projects. You can <a href="#" class="theme-link">provide a project link here</a> as well. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+										
+										
+									</div>
+								</div><!--//item-->
+								<div class="item">
+									<div class="item-heading row align-items-center mb-2">
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Project Sed Fringilla</h4>
+										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">Open Source</div>
+										
+									</div>
+									<div class="item-content">
+										<p>You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+										
+									</div>
+								</div><!--//item-->
+								<div class="item">
+									<div class="item-heading row align-items-center mb-2">
+										<h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Project Praesent </h4>
+										<div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">Open Source</div>
+										
+									</div>
+									<div class="item-content">
+										<p>You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+										
+									</div>
+								</div><!--//item-->
+							</section><!--//project-section-->
+              ((* endif *))	
+						</div><!--//resume-main-->
+						<aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
+							<section class="skills-section py-3">
+								<h3 class="text-uppercase resume-section-heading mb-4">Skills <i class="fas fa-toolbox"></i></h3>
+								<div class="item">
+									<h4 class="item-title">Technical</h4>
+									<ul class="list-unstyled resume-skills-list">
+										((* for s in technical_skills *))
+											<li class="mb-2">(((s.skill)))</li>
+										((* endfor *))
+										</ul>
+									</div><!--//item-->
+									<div class="item">
+										<h4 class="item-title">Professional</h4>
+										<ul class="list-unstyled resume-skills-list">
+										((* for s in professional_skills *))
+											<li class="mb-2">(((s.skill)))</li>
+										((* endfor *))
+										</ul>
+										</div><!--//item-->
+									</section><!--//skills-section-->
+									<section class="education-section py-3">
+										<h3 class="text-uppercase resume-section-heading mb-4">Education <i class="fas fa-university"></i></h3>
+										<ul class="list-unstyled resume-education-list">
+										((* for e in education *))
+											<li class="mb-3">
+												<div class="resume-degree font-weight-bold">(((e.title)))</div>
+												<div class="resume-degree-org text-muted">(((e.university)))</div>
+												<div class="resume-degree-time text-muted">(((e.period)))</div>
+											</li>
+										((* endfor *))
+										</ul>
+									</section><!--//education-section-->
+									<section class="education-section py-3">
+										<h3 class="text-uppercase resume-section-heading mb-4" style="font-size:1.100rem">Certifications <i class="fas fa-graduation-cap"></i></h3>
+										<ul class="list-unstyled resume-awards-list">
+										((* for c in certification *))
+											<li>
+												<div class="font-weight-bold"><a href="(((c.credential)))" target="_blank">(((c.course)))</a></div>
+												<div class="text-muted">(((c.school))) [(((c.period)))]</div>
+											</li>
+										((* endfor *))
+										</ul>
+									</section><!--//certificates-section-->
+									<section class="skills-section py-3">
+										<h3 class="text-uppercase resume-section-heading mb-4">Languages <i class="fas fa-language"></i></h3>
+										<ul class="list-unstyled resume-lang-list">
+										((* for l in language *))
+											<li class="mb-2">(((l.lang))) (<span class="text-muted">(((l.skill)))</span>)</li>
+										((* endfor *))
+										</ul>
+									</section><!--//languages-section-->
+									<section class="skills-section py-3">
+										<h3 class="text-uppercase resume-section-heading mb-4">Interests <i class="far fa-bookmark"></i></h3>
+										<ul class="list-unstyled resume-interests-list mb-0">
+                      ((* for i in interest *))
+											<li class="mb-2"><i class="fas (((i.awesome))) mr-2" data-fa-transform="down-4"></i>(((i.item)))</li>
+                      ((* endfor *))
+										</ul><!--//interests-section-->
+									</section>
+									
+								</aside><!--//resume-aside-->
+							</div><!--//row-->
+						</div><!--//resume-body-->
+						<hr>
+						<div class="resume-footer text-center">
+							<ul class="resume-social-list list-inline mx-auto mb-0 d-inline-block text-muted">
+								<li class="list-inline-item mb-lg-0 mr-3"><a class="resume-link" href="(((github)))" target="_blank"><i class="fab fa-github-square fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">(((github)))</span></a></li>
+								<li class="list-inline-item mb-lg-0 mr-3"><a class="resume-link" href="(((linkedin)))" target="_blank"><i class="fab fa-linkedin fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">(((linkedin)))</span></a></li>
+								<li class="list-inline-item mb-lg-0 mr-lg-3"><a class="resume-link" href="(((hackerrank)))" target="_blank"><i class="fab fa-hackerrank fa-2x mr-2" data-fa-transform="down-4"></i><span class="d-none d-lg-inline-block text-muted">(((hackerrank)))</span></a></li>
+							</ul>
+						</div><!--//resume-footer-->
+					</article>
+					
+				</div><!--//container-->
+				
+				<footer class="footer text-center py-4">
+					<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+					<small class="copyright text-muted">Designed with <i class="fas fa-heart"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+				</footer>
+				
+			</div><!--//main-wrapper-->
+			
+
+</body>
+</html> 
+

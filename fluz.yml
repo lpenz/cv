@@ -1,0 +1,196 @@
+---
+name: Fernando Luz
+meta_description: |
+  Fernando Luz resume's showing some of my experiences, challenges and achievements as developer/researcher/professor/student.
+user: fluz
+profession: Senior Software Engineer / Researcher
+email: prof.fernando.luz@gmail.com
+homepage: tbd
+city: Porto
+country: Portugal
+maps_link: https://goo.gl/maps/SB8WgUCdqnM13S7U6
+github: https://github.com/fluz
+linkedin: https://www.linkedin.com/in/f-luz/
+hackerrank: https://www.hackerrank.com/fernando_luz
+lattes: http://lattes.cnpq.br/9654315760977270
+aboutme: |
+  **12+ years** of developing and working in projects led me to have hands-on experience solving **complex problems** in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven **self-starter** and **fast learner**, always supporting my development teams with **top-notch coding skills**. In my last project, **I led** a pilot project to migrate around **400 test cases** with a constraints of **10 weeks** with **100% accomplished**.
+
+aboutme_generic: |
+  12+ years of developing and working in projects led me to have hands-on experience solving complex problems in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven self-starter and fast learner, always supporting my development teams with top-notch coding skills. In my last project I lead a pilot project to migrate around 400 test cases with a constraints of 10 weeks with 100% achievement.
+
+aboutme_bkp: |
+  I am a developer with a Ph.D. in High-Performance Computing (HPC) and with over 10 years of experience in **C++/C** developing numerical models and simulators.
+
+  All these years that I have been working in development led me to have hands-on experience solving complex problems in software development using several languages and software such as C++/C in numerical simulations, MongoDB to use for persistent memory for applications, Python to integrate different software, C# and Unity 3D to provide a immersive simulation environment, CMake/CDash to provide a cross-compile environment and test the code at the repository and Bash tools to automate the tasks in the Linux.
+
+  As a team leader, what most motivated me was the challenge to maintain team cooperation to reach objectives in the process development. I have the experience to implement a Scrum/Kanban methodology, to share my knowledge with my colleagues and I believe programming requires writing skills so I do my best to write clear and good code and follow best practices.
+
+  I was one of the founders in the Meetup group in Altran PT, and currently I am coordinator of Meetup sessions.
+
+aboutme_old: |
+    I'm currently working as an embedded software architect of DmOS - DATACOM's universal embedded OS. I focus on modularity, continuous integration, incremental qualification and DevOps. I work very closely with the DevOps team, bringing solutions and new technologies, and also helping in general.
+
+    I was one of the architects that worked on the initial definitions of the architecture, processes and tools used nowadays in the company. The architecture group itself was something new back then.
+
+    Before the creation of the architecture group, I led small (8) development teams. At first, I led teams of embedded software development for about 5 years, as I started as a developer myself. I then led the test infrastructure team for about a year while also acting as a software architect for the Ethernet switch product line.
+
+    I hold a master degree in computer science from UFRGS. My research line was on computer networks, distributed systems, fault tolerance and security. My dissertation was about distributed firewall rule coherence. I implemented the prototype checker in Haskell.
+
+    I hold an MBA on management and leadership from UNISINOS. I graduated in electrical engineering from UFRGS.
+
+    I value technical excellence, out-of-the-box thinking, generalism, strategic planning and long-term maintainability. I'm always looking for vulnerabilities and enhancement opportunities in my knowledge and tool set.
+
+    Out of the professional context, I have studied and obtained a license to fly sailplanes. I can definitely say that I learned a lot from doing that, from the differences with my area (extreme risk aversion) as well as from the similarities (briefing/debriefing ~ sprint planning/review).
+
+professional:
+  - company: Altran Portugal [ASML Project]
+    position: Senior Software Engineer
+    period: 2020 - Present
+    description: |
+      Responsible to start the **ASML** project, where I contributed in **Variant Pattern** implementation at the robot component to be used in next lithography machine generation (EXE-5000), and currently I'm leading the Portugal team to expand unit tests quality using a framework based on **gtest**.
+
+    achievements:
+      - item: Delivered first version for RYUN (Universal Pick and Place Robot) component, with **all features planned** for this version;
+      - item: Added unit tests for RYUN component with **100% of code coverage**;
+      - item: Contributed with the RYAU component **migration** to legacy version;
+      - item: Generated an investigation for RYAU autotesters, where I found **65% fake tests** (tests without implementation);
+      - item: Achieved with success the first phase for UTTK to ATTEST migration **(~400 tests in 10 weeks)**.
+
+  - company: Technomar Engineering
+    position: IT Manager
+    period: 2016 - 2018
+    description: |  
+      **Managed** the team responsible to implement new features in the **TMS (Technomar Maritime Simulator)**. **TMS** is a vessel maneuver simulator used in training activities.
+      **Launched** the certification planning for **TMS** simulator by [DNV GL agency](https://www.dnvgl.com/), and the **collaborated** in the the core of hydrodynamic numerical model applied in a "full bridge" simulator.
+      **Cultivated** good practices in software development process, such as **Scrum/Kanban** board, **TDD**, **Git** adoption and **mentored** meeting sessions to promote the homogenization of the knowledge of the team.
+
+    achievements:
+      - item: Enhanced in communication channel using the phonon framework, with gains in **15% speedup** and improve the code maintainability;
+      - item: Redesigned the database in MongoDB, with a **definition of a schema** to be use in DB, and implemented a unified access library to access the data;
+      - item: Orchestrated the **full delivery** of new simulation station at Technomar office, providing a simulator with 360 degrees immersion.
+      - item: Instituted **Gitlab** as tool to obtain code metrics, and manage the bugs, new features, backlog and milestone control for the team and the founders.
+  - company: Numerical Offshore Tank
+    position: Researcher / HPC Software Engineer
+    period: 2008 - 2016
+    description: |  
+      My role in the TPN laboratory was to develop a set of applications with **High-Performance Computing**. The languages I use was **C++/C**, **Python**, **MPI/sockets** and **bash** in Linux and Windows environment. Other duties includes testing and validation of numerical simulations, optimization, implementation of parallel improvements and integration with other projects.
+      I also worked in others several projects, including the first version of **vessel maneuver simulator** called **SMH**. This project was select as finalist of **ANP (National Petroleum Agency)** [Prize Award for Technological Innovation in 2016](http://www.anp.gov.br/pesquisa-desenvolvimento-inovacao/302-premio-anp-de-inovacao-tecnologica/edicoes-anteriores/888-premio-anp-de-inovacao-tecnologica-2016).
+
+    achievements:
+      - item: Optimized parallel execution of the numerical solver in the cluster environment saving around **35% in resources** using my Ph.D. research;
+      - item: Minimized around **10% the time execution** in the standalone version of the numerical solver using OpenMP;
+      - item: Reduced in order to **60% the storage space** with the output results of the application using a binary format;
+      - item: Championed and implemented a **cross compilation** in Windows and Linux environment with CMake;
+      - item: Introduced a **MPI communication** instead pure socket, providing more robustness in the communication channel;
+      - item: Championed the use of *tests in development* flow to increase the development quality;
+      - item: Built an initial **CI** with (CDash and CTest) to check the repository integrity.
+
+  - company: Paulista University
+    position: Graduate Full Professor
+    period: 2011 - 2016
+    description: |  
+      Teaching-related responsibilities such as giving lectures, tutoring, manage homeworks, laboratory activities, exams preparation and grading.
+
+    achievements:
+      - item: Operating System / Open Operating System;
+      - item: Topics in Web Development;
+      - item: Software Engineering;
+      - item: Language Paradigms;
+      - item: Programming Logic and Algorithms;
+      - item: Artificial Intelligence;
+      - item: Distributed System.
+  
+education:
+  - university: University of São Paulo (USP)
+    institute: Polytechnic School
+    title: Ph.D. in Science
+    period: 2010 - 2015
+    theme: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
+    scholarship: FUSP - University of São Paulo Foundation
+
+  - university: University of São Paulo (USP)
+    institute: Physics Institute of São Carlos
+    title: M.Sc. in Applied Physics
+    period: 2006 - 2010
+    theme: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
+    scholarship: CNPq - National Council for Scientific and Technological Development
+
+  - university: University of São Paulo (USP)
+    institute: Physics Institute of São Carlos
+    title: B.Sc. in Physics
+    period: 2001 - 206
+
+certification:
+  - school: Free Code Camp
+    course: Responsive Web Design
+    period: 2020
+    load: ~300h
+    credential: https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/responsive-web-design
+
+  - school: Free Code Camp
+    course: JavaScript Algorithms and Data Structures
+    period: 2020
+    load: ~300h
+    credential: https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/javascript-algorithms-and-data-structures
+
+  - school: Free Code Camp
+    course: Scientific Computing with Python
+    period: 2020
+    load: ~400h
+    credential: https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/scientific-computing-with-python-v7
+
+language:
+  - lang: Portuguese
+    skill: Native
+  - lang: English
+    skill: Fluent
+
+technical_skills:
+  - skill: C++
+    level: 9
+  - skill: bash
+    level: 10
+  - skill: Python
+    level: 8
+  - skill: JavaScript
+    level: 7
+  - skill: C
+    level: 7
+  - skill: C#
+    level: 4
+  - skill: SML
+    level: 7
+  - skill: HTML
+    level: 7
+  - skill: CSS
+    level: 7
+  - skill: Matlab
+    level: 6
+  - skill: MongoDB
+    level: 5
+  - skill: Lead and deliver complex software systems
+    level: 7
+  - skill: Object-oriented design
+    level: 7
+  - skill: Design Patterns
+    level: 7
+  - skill: Functional Paradigm
+    level: 7
+
+professional_skills:
+  - skill: Team player
+  - skill: Problem Solver
+  - skill: Ownership
+  - skill: Time management
+  - skill: Build solutions
+
+interest:
+  - item: Travel
+    awesome: fa-globe-americas 
+  - item: Photography
+    awesome: fa-camera-retro
+  - item: Soccer (SPFC :-) )
+    awesome: fa-futbol
+  - item: MOOC's
+    awesome: fa-chalkboard-teacher
