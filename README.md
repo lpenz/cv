@@ -1,4 +1,4 @@
-[![Run Status](https://api.shippable.com/projects/577f06e63be4f4faa56c2d2e/badge?branch=master)](https://app.shippable.com/projects/577f06e63be4f4faa56c2d2e)
+<!-- [![Run Status](https://api.shippable.com/projects/577f06e63be4f4faa56c2d2e/badge?branch=master)](https://app.shippable.com/projects/577f06e63be4f4faa56c2d2e) -->
 
 # Fernando Luz's CV
 
@@ -6,24 +6,31 @@
 
 My CV is available in the following formats, or layouts:
 
-- [orbit](http://cv.lpenz.org/orbit/cv.html) (HTML)
-- [ceevee](http://cv.lpenz.org/ceevee/cv.html) (HTML)
-- [modern cv classic](http://cv.lpenz.org/moderncvclassic/cv.pdf) (PDF)
-- [resume.cls](http://cv.lpenz.org/resumecls/cv.pdf) (PDF)
-- [beamer](http://cv.lpenz.org/beamer/cv.pdf) (PDF)
-- [markdown](http://cv.lpenz.org/markdown/cv.md) (markdown) and two rendered versions:
-  - [plain text](http://cv.lpenz.org/markdown/cv.txt)
-  - [html](http://cv.lpenz.org/markdown/cv.html)
+### Current views
+
+- [DevResume](https://fluz.github.io/) (HTML)
+
+### To be created
+
+- [ceevee](https://fluz.github.io/ceevee/cv.html) (HTML)
+- [modern cv classic](https://fluz.github.io/moderncvclassic/cv.pdf) (PDF)
+- [resume.cls](https://fluz.github.io/resumecls/cv.pdf) (PDF)
+- [beamer](https://fluz.github.io/beamer/cv.pdf) (PDF)
+- [markdown](https://fluz.github.io/markdown/cv.md) (markdown) and two rendered versions:
+  - [plain text](https://fluz.github.io/markdown/cv.txt)
+  - [html](https://fluz.github.io/markdown/cv.html)
 
 ## Behind the scenes
 
 I keep my *Curriculum Vitae* using software development techniques,
 namely:
 
-- Keep the source code in [github](https://github.com/fluz/cv).
-- Using automated [tests](https://app.shippable.com/projects/577f06e63be4f4faa56c2d2e/status/)
-  and static analysis.
-<!-- - Continuous deployment to <http://cv.lpenz.org>. -->
+- Maintain the source code in [github](https://github.com/fluz/cv).
+- Create different views for the same base [fluz.yml](https://github.com/fluz/cv/fluz.yml)
+  
+## To do:
+- Use automated deploy with shipplable. 
+<!-- - [tests](https://app.shippable.com/projects/577f06e63be4f4faa56c2d2e/status/) and static analysis. -->
 
 The structure of the data is as follows:
 
