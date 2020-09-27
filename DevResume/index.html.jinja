@@ -62,23 +62,27 @@
 								((* for p in professional *))
 								<div class="item mb-3">
 									<div class="item-heading row align-items-center mb-2">
-										<h4 class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">((( p.position )))</h4>
-										<div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-left text-md-right">((( p.company ))) ((* if false *)) / (((p.company_2level))) ((* endif *)) | ((( p.period ))) </div>
+										<h4 class="item-title col-12 col-md-12 col-lg-12 mb-2 mb-md-0">((( p.position )))</h4>
+										<div class="item-title col-12 col-md-6 col-lg-6 mb-2 mb-md-0">(((p.company)))</div>
+										<div class="item-meta col-12 col-md-6 col-lg-6 text-muted text-left text-md-right"> ((( p.period ))) </div>
 									</div>
-									<div class="item-content">
+									<div class="item-content text-justify">
 										<p>((( p.description | markdown("html") )))</p>
+                    ((*if p.achievements *))
+                    <p>Achievements / Tasks:</p>
 										<ul class="resume-list">
 										  ((* for a in p.achievements *))
-											<li>((( a.item )))</li>
+											<li>((( a.item | markdown("html") )))</li>
 										  ((* endfor *))
 										</ul>
+                    ((* endif *))
 									</div>
 								</div>
 								<!--//item-->
 								((* endfor *))
 							</section><!--//work-section-->
 
-							
+							((* if project *))
 							<section class="project-section py-3">
 								<h3 class="text-uppercase resume-section-heading mb-4">Projects</h3>
 								<div class="item mb-3">
@@ -115,11 +119,12 @@
 										
 									</div>
 								</div><!--//item-->
-							</section><!--//project-section-->	
+							</section><!--//project-section-->
+              ((* endif *))	
 						</div><!--//resume-main-->
 						<aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
 							<section class="skills-section py-3">
-								<h3 class="text-uppercase resume-section-heading mb-4">Skills</h3>
+								<h3 class="text-uppercase resume-section-heading mb-4">Skills <i class="fas fa-toolbox"></i></h3>
 								<div class="item">
 									<h4 class="item-title">Technical</h4>
 									<ul class="list-unstyled resume-skills-list">
@@ -138,7 +143,7 @@
 										</div><!--//item-->
 									</section><!--//skills-section-->
 									<section class="education-section py-3">
-										<h3 class="text-uppercase resume-section-heading mb-4">Education</h3>
+										<h3 class="text-uppercase resume-section-heading mb-4">Education <i class="fas fa-university"></i></h3>
 										<ul class="list-unstyled resume-education-list">
 										((* for e in education *))
 											<li class="mb-3">
@@ -150,7 +155,7 @@
 										</ul>
 									</section><!--//education-section-->
 									<section class="education-section py-3">
-										<h3 class="text-uppercase resume-section-heading mb-4">Certifications</h3>
+										<h3 class="text-uppercase resume-section-heading mb-4" style="font-size:1.100rem">Certifications <i class="fas fa-graduation-cap"></i></h3>
 										<ul class="list-unstyled resume-awards-list">
 										((* for c in certification *))
 											<li>
@@ -161,7 +166,7 @@
 										</ul>
 									</section><!--//certificates-section-->
 									<section class="skills-section py-3">
-										<h3 class="text-uppercase resume-section-heading mb-4">Languages</h3>
+										<h3 class="text-uppercase resume-section-heading mb-4">Languages <i class="fas fa-language"></i></h3>
 										<ul class="list-unstyled resume-lang-list">
 										((* for l in language *))
 											<li class="mb-2">(((l.lang))) (<span class="text-muted">(((l.skill)))</span>)</li>
@@ -169,12 +174,11 @@
 										</ul>
 									</section><!--//languages-section-->
 									<section class="skills-section py-3">
-										<h3 class="text-uppercase resume-section-heading mb-4">Interests</h3>
+										<h3 class="text-uppercase resume-section-heading mb-4">Interests <i class="far fa-bookmark"></i></h3>
 										<ul class="list-unstyled resume-interests-list mb-0">
-											<li class="mb-2">Climbing</li>
-											<li class="mb-2">Snowboarding</li>
-											<li class="mb-2">Photography</li>
-											<li>Travelling</li>
+                      ((* for i in interest *))
+											<li class="mb-2"><i class="fas (((i.awesome))) mr-2" data-fa-transform="down-4"></i>(((i.item)))</li>
+                      ((* endfor *))
 										</ul><!--//interests-section-->
 									</section>
 									

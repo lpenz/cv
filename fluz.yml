@@ -12,9 +12,9 @@ maps_link: https://goo.gl/maps/SB8WgUCdqnM13S7U6
 github: https://github.com/fluz
 linkedin: https://www.linkedin.com/in/f-luz/
 hackerrank: https://www.hackerrank.com/fernando_luz
-lattes: http://lattes.cnpq.br/ # TODO: Need to put the correct value here
+lattes: http://lattes.cnpq.br/9654315760977270
 aboutme: |
-  **12+ years** of developing and working in projects led me to have hands-on experience solving **complex problems** in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven **self-starter** and **fast learner**, always supporting my development teams with **top-notch coding skills**. In my last project **I lead** a pilot project to migrate around **400 test cases** with a constraints of **10 weeks** with **100% achievement**.
+  **12+ years** of developing and working in projects led me to have hands-on experience solving **complex problems** in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven **self-starter** and **fast learner**, always supporting my development teams with **top-notch coding skills**. In my last project, **I led** a pilot project to migrate around **400 test cases** with a constraints of **10 weeks** with **100% accomplished**.
 
 aboutme_generic: |
   12+ years of developing and working in projects led me to have hands-on experience solving complex problems in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven self-starter and fast learner, always supporting my development teams with top-notch coding skills. In my last project I lead a pilot project to migrate around 400 test cases with a constraints of 10 weeks with 100% achievement.
@@ -28,95 +28,78 @@ aboutme_bkp: |
 
   I was one of the founders in the Meetup group in Altran PT, and currently I am coordinator of Meetup sessions.
 
-
 aboutme_old: |
-    I'm currently working as an embedded software architect of DmOS - DATACOM's
-    universal embedded OS. I focus on modularity, continuous integration,
-    incremental qualification and DevOps. I work very closely with the DevOps
-    team, bringing solutions and new technologies, and also helping in general.
+    I'm currently working as an embedded software architect of DmOS - DATACOM's universal embedded OS. I focus on modularity, continuous integration, incremental qualification and DevOps. I work very closely with the DevOps team, bringing solutions and new technologies, and also helping in general.
 
-    I was one of the architects that worked on the initial definitions of the
-    architecture, processes and tools used nowadays in the company. The
-    architecture group itself was something new back then.
+    I was one of the architects that worked on the initial definitions of the architecture, processes and tools used nowadays in the company. The architecture group itself was something new back then.
 
-    Before the creation of the architecture group, I led small (8) development
-    teams. At first, I led teams of embedded software development for about 5
-    years, as I started as a developer myself. I then led the test
-    infrastructure team for about a year while also acting as a software
-    architect for the Ethernet switch product line.
+    Before the creation of the architecture group, I led small (8) development teams. At first, I led teams of embedded software development for about 5 years, as I started as a developer myself. I then led the test infrastructure team for about a year while also acting as a software architect for the Ethernet switch product line.
 
-    I hold a master degree in computer science from UFRGS. My research line was
-    on computer networks, distributed systems, fault tolerance and security. My
-    dissertation was about distributed firewall rule coherence. I implemented
-    the prototype checker in Haskell.
+    I hold a master degree in computer science from UFRGS. My research line was on computer networks, distributed systems, fault tolerance and security. My dissertation was about distributed firewall rule coherence. I implemented the prototype checker in Haskell.
 
-    I hold an MBA on management and leadership from UNISINOS. I graduated in
-    electrical engineering from UFRGS.
+    I hold an MBA on management and leadership from UNISINOS. I graduated in electrical engineering from UFRGS.
 
-    I value technical excellence, out-of-the-box thinking, generalism, strategic
-    planning and long-term maintainability. I'm always looking for
-    vulnerabilities and enhancement opportunities in my knowledge and tool set.
+    I value technical excellence, out-of-the-box thinking, generalism, strategic planning and long-term maintainability. I'm always looking for vulnerabilities and enhancement opportunities in my knowledge and tool set.
 
-    Out of the professional context, I have studied and obtained a license to fly
-    sailplanes. I can definitely say that I learned a lot from doing that, from the
-    differences with my area (extreme risk aversion) as well as from the
-    similarities (briefing/debriefing ~ sprint planning/review).
+    Out of the professional context, I have studied and obtained a license to fly sailplanes. I can definitely say that I learned a lot from doing that, from the differences with my area (extreme risk aversion) as well as from the similarities (briefing/debriefing ~ sprint planning/review).
 
 professional:
-  - company: Altran
+  - company: Altran Portugal [ASML Project]
     position: Senior Software Engineer
     period: 2020 - Present
     description: |
-      I was responsible to start the ASML project, where firstly I collaborated to apply the Variant Patterning in the robot component for the next generation of lithography machines(EXE-5000), and currently I'm leading the Portugal team to improve the quality of unit tests using gtest.
+      Responsible to start the **ASML** project, where I contributed in **Variant Pattern** implementation at the robot component to be used in next lithography machine generation (EXE-5000), and currently I'm leading the Portugal team to expand unit tests quality using a framework based on **gtest**.
 
-      Achievements / Tasks:
     achievements:
-      - item: Complete implementation for RYUN (Universal Pick and Place Robot) component;
-      - item: Unit tests for RYUN (ATTEST/gtest) providing a 100% of coverage;
-      - item: Migration of RYAU component to RYAULE (legacy version);
-      - item: Scope analysis of RYAU autotesters, where I found a 65% of fake tests (tests without implementation);
-      - item: Delivery with success the first phase for UTTK to ATTEST migration (~400 tests in 10 weeks);
+      - item: Delivered first version for RYUN (Universal Pick and Place Robot) component, with **all features planned** for this version;
+      - item: Added unit tests for RYUN component with **100% of code coverage**;
+      - item: Contributed with the RYAU component **migration** to legacy version;
+      - item: Generated an investigation for RYAU autotesters, where I found **65% fake tests** (tests without implementation);
+      - item: Achieved with success the first phase for UTTK to ATTEST migration **(~400 tests in 10 weeks)**.
 
-  - company: Technomar Eng.
+  - company: Technomar Engineering
     position: IT Manager
     period: 2016 - 2018
     description: |  
-      I managed the team responsible for developing a new version of vessel maneuver
-      simulator for maritime offshore operations and ports to be used in training activities.
-      The objective was to obtain a certified simulator by DNV agency with an advanced
-      hydrodynamic numerical model applied in a "full bridge" simulator.
-      I implemented good practices in the software development process such as
-      Scrum/Kanban methodology, TDD, some git good practices and local meetups to
-      homogenize the team knowledge.
-      I planned a full redesign of the main simulator, aims to improve the performance,
-      readability and the maintenance. This refactoring was necessary to start a
-      certification process with DNV. I adopt the Gitlab philosophy to define metrics for
-      all projects, and stimulate all team members to use these tools, I manage the
-      sprints, daily meetups and backlogs to all projects. At last, I create a communication
-      channel between the end user and the development team to provide a fast feedback
-      to customer needs.
+      **Managed** the team responsible to implement new features in the **TMS (Technomar Maritime Simulator)**. **TMS** is a vessel maneuver simulator used in training activities.
+      **Launched** the certification planning for **TMS** simulator by [DNV GL agency](https://www.dnvgl.com/), and the **collaborated** in the the core of hydrodynamic numerical model applied in a "full bridge" simulator.
+      **Cultivated** good practices in software development process, such as **Scrum/Kanban** board, **TDD**, **Git** adoption and **mentored** meeting sessions to promote the homogenization of the knowledge of the team.
 
+    achievements:
+      - item: Enhanced in communication channel using the phonon framework, with gains in **15% speedup** and improve the code maintainability;
+      - item: Redesigned the database in MongoDB, with a **definition of a schema** to be use in DB, and implemented a unified access library to access the data;
+      - item: Orchestrated the **full delivery** of new simulation station at Technomar office, providing a simulator with 360 degrees immersion.
+      - item: Instituted **Gitlab** as tool to obtain code metrics, and manage the bugs, new features, backlog and milestone control for the team and the founders.
   - company: Numerical Offshore Tank
-    position: Researcher / HPC Soft. Eng.
+    position: Researcher / HPC Software Engineer
     period: 2008 - 2016
     description: |  
-      My role in this laboratory was to develop a set of applications with High-Performance
-      Computing. The languages used to do this was C++/C, Python, MPI/sockets
-      and bash in a Linux Cluster environment. Other responsibilities include testing
-      and validation of numerical simulations, optimization, improvements of parallel
-      implementations and integration with other projects.
-      I worked in several others projects including the first version of vessel maneuver
-      simulator called SMH. This project was select as finalist of ANP (National Petroleum
-      Agency) Prize Award for Technological Innovation in 2016.
+      My role in the TPN laboratory was to develop a set of applications with **High-Performance Computing**. The languages I use was **C++/C**, **Python**, **MPI/sockets** and **bash** in Linux and Windows environment. Other duties includes testing and validation of numerical simulations, optimization, implementation of parallel improvements and integration with other projects.
+      I also worked in others several projects, including the first version of **vessel maneuver simulator** called **SMH**. This project was select as finalist of **ANP (National Petroleum Agency)** [Prize Award for Technological Innovation in 2016](http://www.anp.gov.br/pesquisa-desenvolvimento-inovacao/302-premio-anp-de-inovacao-tecnologica/edicoes-anteriores/888-premio-anp-de-inovacao-tecnologica-2016).
+
+    achievements:
+      - item: Optimized parallel execution of the numerical solver in the cluster environment saving around **35% in resources** using my Ph.D. research;
+      - item: Minimized around **10% the time execution** in the standalone version of the numerical solver using OpenMP;
+      - item: Reduced in order to **60% the storage space** with the output results of the application using a binary format;
+      - item: Championed and implemented a **cross compilation** in Windows and Linux environment with CMake;
+      - item: Introduced a **MPI communication** instead pure socket, providing more robustness in the communication channel;
+      - item: Championed the use of *tests in development* flow to increase the development quality;
+      - item: Built an initial **CI** with (CDash and CTest) to check the repository integrity.
 
   - company: Paulista University
     position: Graduate Full Professor
     period: 2011 - 2016
     description: |  
-      Teaching-related responsibilities. Presented the following lectures: Operating
-      System, Open Operating System, Topics inWeb Development, Software Engineering,
-      Language Paradigms, Programming Logic and Algorithms, Artificial Intelligence,
-      Distributed System.
+      Teaching-related responsibilities such as giving lectures, tutoring, manage homeworks, laboratory activities, exams preparation and grading.
+
+    achievements:
+      - item: Operating System / Open Operating System;
+      - item: Topics in Web Development;
+      - item: Software Engineering;
+      - item: Language Paradigms;
+      - item: Programming Logic and Algorithms;
+      - item: Artificial Intelligence;
+      - item: Distributed System.
   
 education:
   - university: University of São Paulo (USP)
@@ -125,12 +108,14 @@ education:
     period: 2010 - 2015
     theme: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
     scholarship: FUSP - University of São Paulo Foundation
+
   - university: University of São Paulo (USP)
     institute: Physics Institute of São Carlos
     title: M.Sc. in Applied Physics
     period: 2006 - 2010
     theme: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks
     scholarship: CNPq - National Council for Scientific and Technological Development
+
   - university: University of São Paulo (USP)
     institute: Physics Institute of São Carlos
     title: B.Sc. in Physics
@@ -154,20 +139,6 @@ certification:
     period: 2020
     load: ~400h
     credential: https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/scientific-computing-with-python-v7
-
-random:
-  - I installed my first Debian GNU/Linux at home in 2003, and never reinstalled it
-    from scratch. I use the "testing" release, and update it constantly.
-  - I learned Haskell while developing the prototype of my MSc dissertation in 2006.
-    Since then, I have used it on side projects and on programming contests when I
-    have the chance.
-  - Even though I did not take computer science at graduation, I was 6th on the
-    entry exam of the MSc at my University (UFRGS).
-  - I once got all questions right in a logical reasoning test. The psychologist
-    that evaluated it said that she had never seen that before.
-  - This CV is maintained at <http://github.com/lpenz/cv> with configuration
-    management, automated tests and continuous deployment
-    to <http://cv.lpenz.org> in several output formats.
 
 language:
   - lang: Portuguese
@@ -213,3 +184,13 @@ professional_skills:
   - skill: Ownership
   - skill: Time management
   - skill: Build solutions
+
+interest:
+  - item: Travel
+    awesome: fa-globe-americas 
+  - item: Photography
+    awesome: fa-camera-retro
+  - item: Soccer (SPFC :-) )
+    awesome: fa-futbol
+  - item: MOOC's
+    awesome: fa-chalkboard-teacher
