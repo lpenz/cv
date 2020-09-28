@@ -46,7 +46,7 @@ aboutme_old: |
 professional:
   - company: Altran Portugal [ASML Project]
     position: Senior Software Engineer
-    period: 2020 - Present
+    period: 2018 - Present
     description: |
       Responsible to start the **ASML** project, where I contributed in **Variant Pattern** implementation at the robot component to be used in next lithography machine generation (EXE-5000), and currently I'm leading the Portugal team to expand unit tests quality using a framework based on **gtest**.
 
