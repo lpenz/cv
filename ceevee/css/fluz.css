@@ -72,9 +72,21 @@ div.libullets > ul li:before {
 }
 
 div.pbullets > ul > li > p:before {
-    content: "•";
-    padding-right: 8px;
-    font-weight: bold;
-    color: #11ABB0;
-    /* color: #F06000; */
+  content: "•";
+  padding-right: 8px;
+  font-weight: bold;
+  color: #11ABB0;
+  /* color: #F06000; */
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+ul.resume-list {
+  list-style-type: disc;
+}
+
+ul.resume-list > li > p {
+  margin: 0;
 }
