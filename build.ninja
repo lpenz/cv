@@ -18,7 +18,10 @@ rule cdpdflatex
 # Builds: ####################################################################
 
 # DevResume view:
-build DevResume/cv.html: cvrender DevResume/cv.html.jinda | fluz.yml ./tools/jinda2-render
+build DevResume/index.html: cvrender DevResume/index.html.jinda | fluz.yml ./tools/jinda2-render
+
+# ceevee view:
+build ceevee/cv.html: cvrender  ceevee/cv.html.jinja | fluz.yml ./tools/jinja2-render
 
 // # resumecls view:
 // build resumecls/cv.tex: cvrender   resumecls/cv.tex.jinja | fluz.yml ./tools/jinja2-render
@@ -35,8 +38,6 @@ build DevResume/cv.html: cvrender DevResume/cv.html.jinda | fluz.yml ./tools/jin
 // # orbit view:
 // build orbit/cv.html: cvrender   orbit/cv.html.jinja | fluz.yml ./tools/jinja2-render
 
-// # ceevee view:
-// build ceevee/cv.html: cvrender  ceevee/cv.html.jinja | fluz.yml ./tools/jinja2-render
 
 // # markdown view:
 // build markdown/cv.md: cvrender  markdown/cv.md.jinja | fluz.yml ./tools/jinja2-render
