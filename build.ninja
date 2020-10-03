@@ -21,7 +21,16 @@ rule cdpdflatex
 build DevResume/index.html: cvrender DevResume/index.html.jinda | fluz.yml ./tools/jinda2-render
 
 # ceevee view:
-build ceevee/cv.html: cvrender  ceevee/cv.html.jinja | fluz.yml ./tools/jinja2-render
+build ceevee/cv.html: cvrender ceevee/cv.html.jinja | fluz.yml ./tools/jinja2-render
+
+# markdown view:
+build markdown/cv.md: cvrender markdown/cv.md.jinja | fluz.yml ./tools/jinja2-render
+
+# markdown-html view:
+build markdown/cv.html: mdhtml markdown/cv.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
+
+# markdown-txt view:
+build markdown/cv.txt: mdtxt markdown/cv.md
 
 // # resumecls view:
 // build resumecls/cv.tex: cvrender   resumecls/cv.tex.jinja | fluz.yml ./tools/jinja2-render
@@ -39,14 +48,6 @@ build ceevee/cv.html: cvrender  ceevee/cv.html.jinja | fluz.yml ./tools/jinja2-r
 // build orbit/cv.html: cvrender   orbit/cv.html.jinja | fluz.yml ./tools/jinja2-render
 
 
-// # markdown view:
-// build markdown/cv.md: cvrender  markdown/cv.md.jinja | fluz.yml ./tools/jinja2-render
-
-// # markdown-html view:
-// build markdown/cv.html: mdhtml markdown/cv.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
-
-// # markdown-txt view:
-// build markdown/cv.txt: mdtxt markdown/cv.md
 
 // # index page:
 // build _readme.md: cutreadme README.md | ./tools/cutreadme

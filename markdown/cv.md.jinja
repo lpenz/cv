@@ -1,65 +1,48 @@
+# (((name)))'s Resume
 
 ## Contact information
 
 -----             -----
-Email:            [(((email)))](mailto:(((email))))
-((* if phone -*))
-Phone:            [(((phone)))](tel:(((phone))))
-((* endif -*))
-Homepage:         [(((homepage)))]( (((homepage))) )
-LinkedIn:         [https://linkedin.com/in/(((user)))/](https://linkedin.com/in/(((user)))/)
-GitHub:           [https://github.com/(((user)))/](https://github.com/(((user)))/)
-Twitter:          @[(((user)))](https://twitter.com/(((user)))/)
-Stack Overflow:   [https://stackoverflow.com/cv/(((user)))/](https://stackoverflow.com/cv/(((user)))/)
+Email:      [(((email)))](mailto:(((email))))
+LinkedIn:   [(((linkedin)))]( (((linkedin))) )
+GitHub:     [(((github)))]( (((github))) )
+Twitter:    [(((twitter)))]( (((twitter))) )
+Hackerrank: [(((hackerrank)))]( (((hackerrank))) )
 -----             -----
-
 
 ## About me
 
 (((aboutme)))
-
-
 ## Experience
-
 ((* for p in professional *))
-### (((p.period))) --- (((p.job))), *(((p.place)))*
+### *(((p.position)))* --- (((p.company))), (((p.period)))
 
 (((p.description)))
-
-
+**Achievements / Tasks:**
+((* for i in p.achievements *))
+* (((i.item)))((* endfor *))
 ((* endfor *))
-
 ## Education
-
 ((* for e in education *))
-### (((e.period))) --- (((e.course))), *(((e.place)))*
+### (((e.title))), *(((e.period)))*
 
-(((e.description)))
+**University:** (((e.university)))
+**Institute:** (((e.institute)))((* if e.theme *))
+**Theme**: (((e.theme)))
+((* endif *))((* endfor *))
 
-
-((* endfor *))
-
-## Other courses
-
-((* for c in courses *))
-- (((c.period))) --- **(((c.course)))**, *(((c.place)))*
+## Certifications
+((* for c in certification *))
+### **(((c.course)))** --- (((c.school))), (((c.period)))
 
 Load: (((c.load)))
-
-(((c.description)))
-
-
+Certificate: [(((c.course)))]( (((c.credential))) )
 ((* endfor *))
-
 ## Languages
+((* for l in language *))
+* *(((l.lang)))*: (((l.skill)))((* endfor *))
 
-((* for l in languages *))
-- *(((l.lang)))*: (((l.skill)))
-((* endfor *))
-
-## Random achievements
-
-((* for r in random *))
-- (((r | markdown)))
-((* endfor *))
+## Skills
+((* for s in technical_skills *))
+* *(((s.skill)))*((* endfor *))
 
