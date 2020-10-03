@@ -7,10 +7,10 @@ rule mdhtml
   command = pandoc -f markdown -t html -V "title:Fernando Luz" -s --template pandoc-bootstrap/template.html --css pandoc-bootstrap/template.css -o $out $in
 
 rule mdtxt
-  command = pandoc -f markdown -t plain -V "title:Fernando Luz" -s -o $out $in
+  command = pandoc -f markdown -t plain -V "title:Fernando Luz" -s $in -o $out 
 
 rule cvrender
-  command = ./tools/jinja2-render -y fluz.yml -o $out $in
+  command = ./tools/jinja2-render -y fluz.yml $in -o $out 
 
 rule cdpdflatex
   command = ./tools/cddo $in $$PWD/tools/latexer
