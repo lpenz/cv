@@ -28,7 +28,6 @@ e. Others
 
 @import url("fonts.css");
 @import url("fontello/css/fontello.css");
-@import url("font-awesome/css/font-awesome.min.css");
 
 /* ------------------------------------------------------------------
 /* b. Reset
@@ -171,7 +170,7 @@ h5 { font-size: 18px; line-height: 30px; }
 h6 { font-size: 14px; line-height: 30px; }
 .subheader { }
 
-p { margin: 0 0 30px 0; }
+p { margin: 0 0 20px 0; }
 p img { margin: 0; }
 p.lead {
    font: 19px/36px 'opensans-light', sans-serif;
@@ -399,6 +398,27 @@ dd { margin: 0 0 0 20px; }
 .dictionary-style dd:before {
 	content: counter(definitions, decimal) ". ";
 }
+
+/* Bullet Definition Style Markup */
+.bullet-style dt {
+	display: inline;
+	counter-reset: definitions;
+}
+.bullet-style dt + dt:before {
+	content: ", ";
+	margin-left: -0.2em;
+}
+.bullet-style dd {
+	display: block;
+	counter-increment: definitions;
+}
+.bullet-style dd:before {
+   content: "\2022"; 
+   color:#11ABB0;
+   display: inline-block; width: 1em;
+   margin-left: -1em
+}
+
 
 /* Pagination */
 .pagination {
@@ -629,9 +649,9 @@ input[type="checkbox"] { display: inline; }
 .row.collapsed > .column,
 .row.collapsed > .columns,
 .column.collapsed, .columns.collapsed  { padding: 0; }
-
+/* 
 [class*="column"] + [class*="column"]:last-child { float: right; }
-[class*="column"] + [class*="column"].end { float: right; }
+[class*="column"] + [class*="column"].end { float: right; } */
 
 /* column widths */
 .row .one         { width: 8.33333%; }

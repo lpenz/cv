@@ -203,12 +203,12 @@ ul#nav li.current a { color: #F06000; }
 }
 #about p {
    line-height: 30px;
-   color: #7A7A7A;
+   color: oldlace;
 }
 #about .profile-pic {
    position: relative;
-   width: 120px;
-   height: 120px;
+   width: 150px;
+   height: 150px;
    border-radius: 100%;
 }
 #about .contact-details { width: 41.66667%; }
@@ -262,7 +262,7 @@ ul#nav li.current a { color: #F06000; }
 #resume .main-col { padding-right: 10%; }
 
 .education, .work {
-   margin-bottom: 48px;
+   margin-bottom: 28px;
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
 }

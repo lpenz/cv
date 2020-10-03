@@ -1,0 +1,114 @@
+
+.fluz_section {
+   background: #fff;
+   padding-top: 50px;
+   padding-bottom: 0px;
+   overflow: hidden;
+}
+
+.fluz_section a, .fluz_section a:visited  { color: #11ABB0; }
+.fluz_section a:hover, .fluz_section a:focus { color: #313131; }
+
+.fluz_section h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+.fluz_section h1 span {
+   border-bottom: 3px solid #11ABB0;
+   padding-bottom: 6px;
+}
+.fluz_section h3 {
+   font: 25px/30px 'opensans-bold', sans-serif;
+   margin-top: 24px;
+}
+
+.fluz_section .header-col { padding-top: 9px; }
+.fluz_section .main-col { padding-right: 10%; }
+
+.fluz_section .info {
+   font: 18px/24px 'librebaskerville', serif;
+   font-weight: bold;
+   color: #11ABB0;
+   margin-bottom: 18px;
+   margin-top: 9px;
+}
+.fluz_section .info span {
+   margin-right: 5px;
+   margin-left: 5px;
+}
+.fluz_section .date {
+   font: 15px/24px 'opensans-regular', sans-serif;
+   margin-top: 6px;
+}
+
+@media only screen and (max-width: 900px) {
+   .fluz_section h1 { font: 16px/24px 'opensans-bold', sans-serif; }
+   .fluz_section .main-col { padding-right: 5%; }   
+}
+@media only screen and (max-width: 767px) {
+   .fluz_section .header-col {
+      padding-top: 0;
+      margin-bottom: 48px;
+      text-align: center;
+   }
+   .fluz_section h1 { letter-spacing: 3px; }
+   .fluz_section .main-col { padding-right: 30px; }
+   .fluz_section h3, .fluz_section .info { text-align: center; }
+      
+   .bars { width: 100%; }
+
+}
+
+div.columns > p {
+   margin: 0;
+}
+
+div.libullets > ul li:before {
+   content: "•";
+   padding-right: 8px;
+   font-weight: bold;
+   color: #11ABB0;
+   /* color: #F06000; */
+}
+
+div.pbullets > ul > li > p:before {
+   content: "•";
+   padding-right: 8px;
+   font-weight: bold;
+   color: #11ABB0;
+   /* color: #F06000; */
+}
+
+.text-justify {
+   text-align: justify !important;
+}
+
+ul.resume-list {
+   list-style-type: disc;
+   padding-left: 20px;
+}
+
+ul.resume-list > li > p {
+   margin: 0;
+}
+/* 
+[class*="column"] + [class*="column"]:last-child {
+   float: left;
+} */
+
+div.lead > p {
+   font: 19px 'opensans-light', sans-serif;
+}
+
+div.lead > p > strong {
+   font: 19px 'opensans', sans-serif;
+   font-weight: bold;
+   color: #fff;
+}
+
+dl.bullet-style > dd > p {
+   display:inline;
+   margin-block-start: 0em;
+   margin-block-end: 0em;
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <!--- Basic Page Needs ======================================= -->
+  <meta charset="utf-8">
+  <title>(((name))) Resume</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="(((meta_description)))">
+  <meta name="author" content="(((name)))">
+
+  <!-- Mobile Specific Metas =================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Script ================================================== -->
+	<!-- FontAwesome JS-->
+	<script defer src="css/fontawesome/js/all.min.js"></script>
+  
+  <!-- CSS ===================================================== -->
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/fluz.css">
+  <!-- <link rel="stylesheet" href="css/media-queries.css"> -->
+  <!-- <link rel="stylesheet" href="css/magnific-popup.css"> -->
+  <!-- <link rel="stylesheet" href="css/github-calendar-responsive.css"> -->
+
+  <!-- Favicons ================================================ -->
+  <link rel="shortcut icon" href="favicon.png">
+
+  <!-- Tag cloud =============================================== -->
+  <script src="lib/d3.js"></script>
+  <script src="lib/d3.layout.cloud.js"></script>
+  <script src="lib/d3.cloud.simplified.js"></script>
+</head>
+
+<body>
+
+  <!-- Header ================================================== -->
+  <header id="home">
+
+    <nav id="nav-wrap">
+
+      <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+      <ul id="nav" class="nav">
+        <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+        <li><a class="smoothscroll" href="#about">About</a></li>
+        <li><a class="smoothscroll" href="#work_experiences">Work Experiences</a></li>
+        <li><a class="smoothscroll" href="#education">Education</a></li>
+        <li><a class="smoothscroll" href="#skills">Skills</a></li>
+      </ul> <!-- end #nav -->
+
+    </nav> <!-- end #nav-wrap -->
+
+    <div class="row banner">
+      <div class="banner-text">
+        <h1 class="responsive-headline">I'm (((name)))</h1>
+        ((* if elevator_pitch *))
+        <h3>((( elevator_pitch | markdown(html) ))). Let's <a class="smoothscroll" href="#about">start scrolling</a>
+        and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
+        ((* endif *))
+        <hr />
+        <ul class="social">
+          <li><a href="mailto:(((email)))"><i class="fas fa-envelope-square fa-fw fa-lg"></i></a></li>
+((* if phone *))
+          <li><a href="tel:(((phone)))"><i class="fas fa-phone fa-fw fa-lg"></i></a></li>
+((* endif *))
+          <li><a href="(((linkedin)))" target="_blank"><i class="fab fa-linkedin fa-fw fa-lg"></i></a></li>
+          <li><a href="(((github)))" target="_blank"><i class="fab fa-github fa-fw fa-lg"></i></a></li>
+          <li><a href="(((hackerrank)))" target="_blank"><i class="fab fa-hackerrank fa-fw fa-lg"></i></a></li>
+          <li><a href="(((maps_link)))" target="_blank"><i class="fas fa-map-marker-alt fa-fw fa-lg"></i></a></li>
+
+        </ul>
+      </div>
+    </div>
+
+    <p class="scrolldown">
+      <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+    </p>
+  </header> <!-- Header End -->
+
+
+  <!-- About Section ================================================== -->
+  <section id="about">
+
+    <div class="row">
+      <div class="three columns">
+        <img class="profile-pic" src="images/resume-profile-fluz.jpg"  alt="image Fernando Luz">
+      </div>
+
+      <div class="nine columns main-col">
+        <h2>About Me</h2>
+        <div class="text-justify lead">
+          (((aboutme | markdown("html") )))
+        </div>
+      </div>
+
+    </div> <!-- end .main-col -->
+
+  </section> <!-- About Section End-->
+
+
+  <!-- Resume Section ================================================== -->
+  <section id="work_experiences" class="fluz_section">
+    <!-- Education ----------------------------------------------- -->
+    <div class="row education">
+      <div class="three columns header-col">
+        <h1><span>Work Experiences</span></h1>
+      </div>
+
+      <div class="nine columns main-col">
+        ((* for p in professional *))
+        <div class="row item">
+          <div class="twelve columns">
+            <h3>(((p.position)))</h3>
+            <p class="info">(((p.company))) <span>&bull;</span> <em class="date">(((p.period)))</em></p>
+            <div class="text-justify">
+              (((p.description | markdown("html") )))
+              ((*if p.achievements *))
+              <dl class="bullet-style">
+                <dt><b>Achievements / Tasks:</b></dt>
+                ((* for a in p.achievements *))
+                <dd>((( a.item | markdown("html") )))</dd>
+                ((* endfor *))
+              </dl>
+              ((* endif *))
+            </div>
+          </div>
+        </div> <!-- item end -->
+        ((* endfor *))
+      </div> <!-- main-col end -->
+    </div> <!-- End Education -->
+  </section>
+
+  <!-- Work ----------------------------------------------- -->
+  <section id="education" class="fluz_section">
+    <div class="row work">
+      <div class="three columns header-col">
+        <h1><span>Education</span></h1>
+      </div>
+
+      <div class="nine columns main-col">
+        ((* for e in education *))
+        <div class="row item">
+          <div class="twelve columns">
+            <h3>(((e.title)))</h3>
+            <p class="info">(((e.university)))<span>&bull;</span> <em class="date">(((e.period)))</em></p>
+            ((* if e.theme *))
+            <div class="text-justify">
+              <h5>Theme:</h5>
+              ((( e.theme | markdown("html") )))
+            </div>
+            ((* endif *))
+          </div>
+        </div> <!-- item end -->
+        ((* endfor *))
+      </div> <!-- main-col end -->
+    </div> <!-- End Work -->
+  </section>
+
+  <section id="skills" class="fluz_section">
+    <!-- Skills ----------------------------------------------- -->
+    <div class="row skill">
+      <div class="three columns header-col">
+        <h1><span>Skills</span></h1>
+      </div>
+      <div id="wordcloud" class="nine columns main-col">
+      </div>
+      <script>
+        cloud.make({
+          width: 600,
+          height: 400,
+          font: "Impact",
+          container: "#wordcloud",
+          words: [
+          ((* for s in technical_skills *))
+          {'text': '((( s.skill )))', 'size' : '((( s.level * 8 )))'},
+          ((* endfor *))
+          ]
+          })
+      </script>
+    </div> <!-- End skills -->
+  </section> <!-- Resume Section End-->
+
+  <!-- footer ================================================= -->
+  <footer>
+    <div class="row">
+      <div class="twelve columns">
+        <ul class="social-links">
+          <li><a href="mailto:(((email)))"><i class="fas fa-envelope-square"></i></a></li>
+          <li><a href="(((linkedin)))" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="(((github)))" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a href="(((hackerrank)))" target="_blank"><i class="fab fa-hackerrank"></i></a></li>
+          <li><a href="(((skype)))" target="_blank"><i class="fab fa-skype"></i></a></li>
+          <li><a href="(((twitter)))" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+
+        <ul class="copyright">
+          <li>&copy; Copyright 2014 CeeVee</li>
+          <li>Design by <a href="http://www.styleshout.com/" title="Styleshout" target="_blank">Styleshout</a></li>   
+        </ul>
+      </div>
+
+      <div id="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+      </div>
+    </div>
+  </footer> <!-- Footer End-->
+
+  <!-- Java Script ================================================== -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+  <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+  <script src="js/jquery.flexslider.js"></script>
+  <script src="js/waypoints.js"></script>
+  <script src="js/jquery.fittext.js"></script>
+  <script src="js/magnific-popup.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+
+</html>

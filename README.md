@@ -9,10 +9,10 @@ My CV is available in the following formats, or layouts:
 ### Current views
 
 - [DevResume](https://fluz.github.io/) (HTML)
+- [ceevee](https://fluz.github.io/ceevee/cv.html) (HTML)
 
 ### To be created
 
-- [ceevee](https://fluz.github.io/ceevee/cv.html) (HTML)
 - [modern cv classic](https://fluz.github.io/moderncvclassic/cv.pdf) (PDF)
 - [resume.cls](https://fluz.github.io/resumecls/cv.pdf) (PDF)
 - [beamer](https://fluz.github.io/beamer/cv.pdf) (PDF)
