@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- from https://github.com/tonyblundell/pandoc-bootstrap-template -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Fernando Luz</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="pandoc-bootstrap/template.css" />
+</head>
+<body>
+    <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title">Fernando Luz</span>
+        <ul class="nav pull-right doc-info">
+                            </ul>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+    <div class="row">
+            <div class="span12">
+            <h1 id="fernando-luzs-resume">Fernando Luz’s Resume</h1>
+<h2 id="contact-information">Contact information</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td>Email: <a href="mailto:prof.fernando.luz@gmail.com">prof.fernando.luz@gmail.com</a></td>
+</tr>
+<tr class="even">
+<td>LinkedIn: <a href="https://www.linkedin.com/in/f-luz/" class="uri">https://www.linkedin.com/in/f-luz/</a></td>
+</tr>
+<tr class="odd">
+<td>GitHub: <a href="https://github.com/fluz" class="uri">https://github.com/fluz</a></td>
+</tr>
+<tr class="even">
+<td>Twitter: <a href="https://twitter.com/f_luz" class="uri">https://twitter.com/f_luz</a></td>
+</tr>
+<tr class="odd">
+<td>Hackerrank: <a href="https://www.hackerrank.com/fernando_luz" class="uri">https://www.hackerrank.com/fernando_luz</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="about-me">About me</h2>
+<p><strong>12+ years</strong> of developing and working in projects led me to have hands-on experience solving <strong>complex problems</strong> in software development using several languages and frameworks across a wide range of companies, including startups, oil and gas industries, educational institutions and research labs. Driven <strong>self-starter</strong> and <strong>fast learner</strong>, always supporting my development teams with <strong>top-notch coding skills</strong>. In my last project, <strong>I led</strong> a pilot project to migrate around <strong>400 test cases</strong> with a constraints of <strong>10 weeks</strong> with <strong>100% accomplished</strong>.</p>
+<h2 id="experience">Experience</h2>
+<h3 id="senior-software-engineer-altran-portugal-asml-project-2018---present"><em>Senior Software Engineer</em> — Altran Portugal [ASML Project], 2018 - Present</h3>
+<p>Responsible to start the <strong>ASML</strong> project, where I contributed in <strong>Variant Pattern</strong> implementation at the robot component to be used in next lithography machine generation (EXE-5000), and currently I’m leading the Portugal team to expand unit tests quality using a framework based on <strong>gtest</strong>.</p>
+<p><strong>Achievements / Tasks:</strong></p>
+<ul>
+<li>Delivered first version for RYUN (Universal Pick and Place Robot) component, with <strong>all features planned</strong> for this version;</li>
+<li>Added unit tests for RYUN component with <strong>100% of code coverage</strong>;</li>
+<li>Contributed with the RYAU component <strong>migration</strong> to legacy version;</li>
+<li>Generated an investigation for RYAU autotesters, where I found <strong>65% fake tests</strong> (tests without implementation);</li>
+<li>Achieved with success the first phase for UTTK to ATTEST migration <strong>(~400 tests in 10 weeks)</strong>.</li>
+</ul>
+<h3 id="it-manager-technomar-engineering-2016---2018"><em>IT Manager</em> — Technomar Engineering, 2016 - 2018</h3>
+<p><strong>Managed</strong> the team responsible to implement new features in the <strong>TMS (Technomar Maritime Simulator)</strong>. <strong>TMS</strong> is a vessel maneuver simulator used in training activities. <strong>Launched</strong> the certification planning for <strong>TMS</strong> simulator by <a href="https://www.dnvgl.com/">DNV GL agency</a>, and the <strong>collaborated</strong> in the the core of hydrodynamic numerical model applied in a “full bridge” simulator. <strong>Cultivated</strong> good practices in software development process, such as <strong>Scrum/Kanban</strong> board, <strong>TDD</strong>, <strong>Git</strong> adoption and <strong>mentored</strong> meeting sessions to promote the homogenization of the knowledge of the team.</p>
+<p><strong>Achievements / Tasks:</strong></p>
+<ul>
+<li>Enhanced in communication channel using the phonon framework, with gains in <strong>15% speedup</strong> and improve the code maintainability;</li>
+<li>Redesigned the database in MongoDB, with a <strong>definition of a schema</strong> to be use in DB, and implemented a unified access library to access the data;</li>
+<li>Orchestrated the <strong>full delivery</strong> of new simulation station at Technomar office, providing a simulator with 360 degrees immersion.</li>
+<li>Instituted <strong>Gitlab</strong> as tool to obtain code metrics, and manage the bugs, new features, backlog and milestone control for the team and the founders.</li>
+</ul>
+<h3 id="researcher-hpc-software-engineer-numerical-offshore-tank-2008---2016"><em>Researcher / HPC Software Engineer</em> — Numerical Offshore Tank, 2008 - 2016</h3>
+<p>My role in the TPN laboratory was to develop a set of applications with <strong>High-Performance Computing</strong>. The languages I use was <strong>C++/C</strong>, <strong>Python</strong>, <strong>MPI/sockets</strong> and <strong>bash</strong> in Linux and Windows environment. Other duties includes testing and validation of numerical simulations, optimization, implementation of parallel improvements and integration with other projects. I also worked in others several projects, including the first version of <strong>vessel maneuver simulator</strong> called <strong>SMH</strong>. This project was select as finalist of <strong>ANP (National Petroleum Agency)</strong> <a href="http://www.anp.gov.br/pesquisa-desenvolvimento-inovacao/302-premio-anp-de-inovacao-tecnologica/edicoes-anteriores/888-premio-anp-de-inovacao-tecnologica-2016">Prize Award for Technological Innovation in 2016</a>.</p>
+<p><strong>Achievements / Tasks:</strong></p>
+<ul>
+<li>Optimized parallel execution of the numerical solver in the cluster environment saving around <strong>35% in resources</strong> using my Ph.D. research;</li>
+<li>Minimized around <strong>10% the time execution</strong> in the standalone version of the numerical solver using OpenMP;</li>
+<li>Reduced in order to <strong>60% the storage space</strong> with the output results of the application using a binary format;</li>
+<li>Championed and implemented a <strong>cross compilation</strong> in Windows and Linux environment with CMake;</li>
+<li>Introduced a <strong>MPI communication</strong> instead pure socket, providing more robustness in the communication channel;</li>
+<li>Championed the use of <em>tests in development</em> flow to increase the development quality;</li>
+<li>Built an initial <strong>CI</strong> with (CDash and CTest) to check the repository integrity.</li>
+</ul>
+<h3 id="graduate-full-professor-paulista-university-2011---2016"><em>Graduate Full Professor</em> — Paulista University, 2011 - 2016</h3>
+<p>Teaching-related responsibilities such as giving lectures, tutoring, manage homeworks, laboratory activities, exams preparation and grading.</p>
+<p><strong>Achievements / Tasks:</strong></p>
+<ul>
+<li>Operating System / Open Operating System;</li>
+<li>Topics in Web Development;</li>
+<li>Software Engineering;</li>
+<li>Language Paradigms;</li>
+<li>Programming Logic and Algorithms;</li>
+<li>Artificial Intelligence;</li>
+<li>Distributed System.</li>
+</ul>
+<h2 id="education">Education</h2>
+<h3 id="ph.d.in-science-2010---2015">Ph.D. in Science, <em>2010 - 2015</em></h3>
+<p><strong>University:</strong> University of São Paulo (USP) <strong>Institute:</strong> Polytechnic School <strong>Theme</strong>: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks</p>
+<h3 id="m.sc.-in-applied-physics-2006---2010">M.Sc. in Applied Physics, <em>2006 - 2010</em></h3>
+<p><strong>University:</strong> University of São Paulo (USP) <strong>Institute:</strong> Physics Institute of São Carlos <strong>Theme</strong>: Methodology for execution of parallel applications based on BSP model with heterogeneous tasks</p>
+<h3 id="b.sc.-in-physics-2001---206">B.Sc. in Physics, <em>2001 - 206</em></h3>
+<p><strong>University:</strong> University of São Paulo (USP) <strong>Institute:</strong> Physics Institute of São Carlos</p>
+<h2 id="certifications">Certifications</h2>
+<h3 id="responsive-web-design-free-code-camp-2020"><strong>Responsive Web Design</strong> — Free Code Camp, 2020</h3>
+<p>Load: ~300h Certificate: <a href="https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/responsive-web-design">Responsive Web Design</a></p>
+<h3 id="javascript-algorithms-and-data-structures-free-code-camp-2020"><strong>JavaScript Algorithms and Data Structures</strong> — Free Code Camp, 2020</h3>
+<p>Load: ~300h Certificate: <a href="https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a></p>
+<h3 id="scientific-computing-with-python-free-code-camp-2020"><strong>Scientific Computing with Python</strong> — Free Code Camp, 2020</h3>
+<p>Load: ~400h Certificate: <a href="https://www.freecodecamp.org/certification/fcc306e7694-fe85-4564-b699-2965fc0ab265/scientific-computing-with-python-v7">Scientific Computing with Python</a></p>
+<h2 id="languages">Languages</h2>
+<ul>
+<li><em>Portuguese</em>: Native</li>
+<li><em>English</em>: Fluent</li>
+</ul>
+<h2 id="skills">Skills</h2>
+<ul>
+<li><em>C++</em></li>
+<li><em>bash</em></li>
+<li><em>Python</em></li>
+<li><em>JavaScript</em></li>
+<li><em>C</em></li>
+<li><em>C#</em></li>
+<li><em>SML</em></li>
+<li><em>HTML</em></li>
+<li><em>CSS</em></li>
+<li><em>Matlab</em></li>
+<li><em>MongoDB</em></li>
+<li><em>Lead and deliver complex software systems</em></li>
+<li><em>Object-oriented design</em></li>
+<li><em>Design Patterns</em></li>
+<li><em>Functional Paradigm</em></li>
+</ul>
+            </div>
+    </div>
+  </div>
+</body>
+</html>

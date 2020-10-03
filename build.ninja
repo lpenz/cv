@@ -4,10 +4,10 @@ rule cutreadme
   command = ./tools/cutreadme $in $out
 
 rule mdhtml
-  command = pandoc -f markdown -t html -V "title:Fernando Luz" -s --template pandoc-bootstrap/template.html --css pandoc-bootstrap/template.css -o $out $in
+  command = pandoc -f markdown -t html -V "pagetitle:Fernando Luz's Resume" -s --css templates/default.css -o $out $in
 
 rule mdtxt
-  command = pandoc -f markdown -t plain -V "title:Fernando Luz" -s $in -o $out 
+  command = pandoc -f markdown -t plain -s $in -o $out 
 
 rule cvrender
   command = ./tools/jinja2-render -y fluz.yml $in -o $out 
