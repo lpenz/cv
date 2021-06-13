@@ -1,6 +1,6 @@
-[![Run Status](https://api.shippable.com/projects/577f06e63be4f4faa56c2d2e/badge?branch=master)](https://app.shippable.com/projects/577f06e63be4f4faa56c2d2e)
+[![CI](https://github.com/lpenz/cv/actions/workflows/ci.yml/badge.svg)](https://github.com/lpenz/cv/actions/workflows/ci.yml)
 
-# Leandro Penz's CV
+# Leandro Lisboa Penz's CV
 
 
 ## CV formats
@@ -23,7 +23,7 @@ I keep my *Curriculum Vitae* using software development techniques,
 namely:
 
 - Keeping the source code in [github](https://github.com/lpenz/cv).
-- Using automated [tests](https://app.shippable.com/projects/577f06e63be4f4faa56c2d2e/status/)
+- Using automated [tests](https://github.com/lpenz/cv/actions)
   and static analysis.
 - Continuous deployment to <http://cv.lpenz.org>.
 

@@ -1,0 +1,10 @@
+---
+name: build
+description: 'Build cv.lpenz.org page'
+runs:
+  using: "composite"
+  steps:
+    - run: docker build -t container .
+      shell: bash
+    - run: docker run --rm --privileged -v "$PWD:$PWD" -w "$PWD" --name container container
+      shell: bash
