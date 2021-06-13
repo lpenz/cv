@@ -1,0 +1,142 @@
+\documentclass[ignorenonframetext]{beamer}
+\usepackage[utf8]{inputenc}
+
+\usetheme{Hannover}
+\usecolortheme{whale}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{enumerate items}[default]
+
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\input{brewer.tex}
+\newcommand{\myempha}[1]{{\color{dark27c1}\bf #1}}
+\newcommand{\myemphb}[1]{{\color{dark27c2}\bf #1}}
+\newcommand{\myemphc}[1]{{\color{dark27c3}\bf #1}}
+\newcommand{\myemphd}[1]{{\color{dark27c4}\bf #1}}
+\newcommand{\myemphe}[1]{{\color{dark27c5}\bf #1}}
+\newcommand{\myemphf}[1]{{\color{dark27c6}\bf #1}}
+\newcommand{\myemphg}[1]{{\color{dark27c7}\bf #1}}
+\renewcommand{\emph}{\myemphg}
+
+
+\title{(((name)))}
+\author{}
+\date{lpenz@lpenz.org}
+
+
+\begin{document}
+
+\begin{frame}
+    \maketitle
+\end{frame}
+
+\begin{frame}
+    \tableofcontents
+\end{frame}
+
+
+\section{Contact}
+
+\begin{frame}{Contact information}
+    Email: \hfill \href{mailto:(((email)))}{(((email)))} \\
+((* if phone *))
+    Phone: \hfill (((phone))) \\
+((* endif *))
+    Homepage: \hfill \url{(((homepage)))} \\
+    LinkedIn: \hfill \url{https://linkedin.com/in/(((user)))} \\
+    Lattes CV: \hfill \url{(((lattes)))} \\
+    GitHub: \hfill \url{https://github.com/(((user)))} \\
+    Twitter: \hfill \href{https://twitter.com/(((user)))}{@(((user)))} \\
+    Stack Overflow: \hfill \url{https://stackoverflow.com/cv/(((user)))}
+\end{frame}
+
+
+\section{About me}
+
+\begin{frame}[allowframebreaks]{About me}
+    (((aboutme | markdown | regex('\n\n', '\n\n\\\\vspace{0.3cm}'))))
+\end{frame}
+
+
+\section{Experience}
+
+((* for p in professional *))
+
+\subsection{(((p.job)))}
+\begin{frame}[allowframebreaks]{(((p.job)))}
+    \myempha{(((p.place)))}
+
+    \myemphb{(((p.job)))} \\
+    \hfill \myemphc{(((p.period)))}
+
+    (((p.description | markdown)))
+\end{frame}
+
+((* endfor *))
+
+
+\section{Education}
+
+((* for e in education *))
+
+\subsection{(((e.course)))}
+\begin{frame}{(((e.course)))}
+    \myempha{(((e.place)))}
+
+    \myemphb{(((e.course)))} \\
+    \hfill \myemphc{(((e.period)))}
+
+    (((e.description | markdown)))
+\end{frame}
+
+((* endfor *))
+
+
+\section{Other courses}
+
+\begin{frame}{Other courses}
+((* for c in courses *))
+
+((* if not loop.first *))
+    \vspace{1em}
+    \hrule{}
+    \vspace{1em}
+((* endif *))
+
+    \myempha{(((c.place)))}
+
+    \myemphb{(((c.course)))} \\
+    \hfill \myemphc{(((c.period)))}
+
+    (((c.description | markdown)))
+
+((* endfor *))
+\end{frame}
+
+
+\section{Languages}
+
+\begin{frame}{Languages}
+    \begin{tabular}{rl}
+        ((* for l in languages *))
+        \myemphe{(((l.lang))):}&\myemphg{(((l.skill)))}\\
+        ((* endfor *))
+    \end{tabular}
+\end{frame}
+
+
+\section{Misc}
+
+\begin{frame}[allowframebreaks]{Random anecdotes}
+    \begin{itemize}
+        ((* for r in random *))
+        \item (((r | markdown)))
+        ((* endfor *))
+    \end{itemize}
+\end{frame}
+
+
+\end{document}
+
+% vim: ft=tex.jinja

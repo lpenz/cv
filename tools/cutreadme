@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e -o pipefail
+
+sed '1,3d' "$1" > "$2"
+
