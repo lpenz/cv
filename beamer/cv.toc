@@ -1,0 +1,15 @@
+\beamer@sectionintoc {1}{Contact}{3}{0}{1}
+\beamer@sectionintoc {2}{About me}{4}{0}{2}
+\beamer@sectionintoc {3}{Experience}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{Software engineer}{7}{0}{3}
+\beamer@subsectionintoc {3}{2}{Embedded software architect}{8}{0}{3}
+\beamer@subsectionintoc {3}{3}{Leader of test automation team; embedded software architect}{10}{0}{3}
+\beamer@subsectionintoc {3}{4}{Leader of embedded software team}{12}{0}{3}
+\beamer@subsectionintoc {3}{5}{Embedded software developer}{13}{0}{3}
+\beamer@sectionintoc {4}{Education}{14}{0}{4}
+\beamer@subsectionintoc {4}{1}{MBA - Organizational Leadership and Management}{14}{0}{4}
+\beamer@subsectionintoc {4}{2}{Master of Science, Computer Science}{15}{0}{4}
+\beamer@subsectionintoc {4}{3}{Graduation, Electrical Engineering}{16}{0}{4}
+\beamer@sectionintoc {5}{Other courses}{17}{0}{5}
+\beamer@sectionintoc {6}{Languages}{18}{0}{6}
+\beamer@sectionintoc {7}{Misc}{19}{0}{7}
