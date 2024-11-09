@@ -97,7 +97,7 @@ def main():
             d.update(json.load(fd))
     for y in opts.yaml:
         with open(y) as fd:
-            d.update(yaml.load(fd))
+            d.update(yaml.safe_load(fd))
     for e in opts.set:
         (k, v) = e.split('=')
         d[k] = v

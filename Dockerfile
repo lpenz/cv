@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM docker.io/debian:bookworm
 MAINTAINER Leandro Lisboa Penz <lpenz@lpenz.org>
 
 # install debian packages:
@@ -8,6 +8,7 @@ RUN set -e -x; \
     apt-get install -y --no-install-recommends \
         pandoc ninja-build \
         texlive texlive-latex-extra cm-super \
+        texlive-fonts-extra \
         python3-yaml python3-jinja2 \
         locales
 
