@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- from https://github.com/tonyblundell/pandoc-bootstrap-template -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Leandro Lisboa Penz</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="pandoc-bootstrap/template.css" />
+</head>
+<body>
+    <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title">Leandro Lisboa Penz</span>
+        <ul class="nav pull-right doc-info">
+                            </ul>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+    <div class="row">
+            <div class="span12">
+            <h2 id="cv-formats">CV formats</h2>
+            <p>My CV is available in the following formats, or
+            layouts:</p>
+            <ul>
+            <li><a href="http://cv.lpenz.org/orbit/cv.html">orbit</a>
+            (HTML)</li>
+            <li><a href="http://cv.lpenz.org/ceevee/cv.html">ceevee</a>
+            (HTML)</li>
+            <li><a
+            href="http://cv.lpenz.org/moderncvclassic/cv.pdf">modern cv
+            classic</a> (PDF)</li>
+            <li><a
+            href="http://cv.lpenz.org/resumecls/cv.pdf">resume.cls</a>
+            (PDF)</li>
+            <li><a href="http://cv.lpenz.org/beamer/cv.pdf">beamer</a>
+            (PDF)</li>
+            <li><a
+            href="http://cv.lpenz.org/markdown/cv.md">markdown</a>
+            (markdown) and two rendered versions:
+            <ul>
+            <li><a href="http://cv.lpenz.org/markdown/cv.txt">plain
+            text</a></li>
+            <li><a
+            href="http://cv.lpenz.org/markdown/cv.html">html</a></li>
+            </ul></li>
+            </ul>
+            <h2 id="behind-the-scenes">Behind the scenes</h2>
+            <p>I keep my <em>Curriculum Vitae</em> using software
+            development techniques, namely:</p>
+            <ul>
+            <li>Keeping the source code in <a
+            href="https://github.com/lpenz/cv">github</a>.</li>
+            <li>Using automated <a
+            href="https://github.com/lpenz/cv/actions">tests</a> and
+            static analysis.</li>
+            <li>Continuous deployment to <a href="http://cv.lpenz.org"
+            class="uri">http://cv.lpenz.org</a>.</li>
+            </ul>
+            <p>The structure of the data is as follows:</p>
+            <ul>
+            <li>lpenz.yml: single data source in <a
+            href="http://yaml.org/">YAML</a>.</li>
+            <li>build.ninja: <a
+            href="https://ninja-build.org/">ninja</a> build system.</li>
+            <li>…that are used to render my CV in the several different
+            “views.”</li>
+            </ul>
+            </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+'''Render jinja2 file'''
+
+import sys
+import os
+import codecs
+import re
+
+import json
+import yaml
+import tempfile
+import subprocess
+from jinja2 import Environment, FileSystemLoader
+
+from optparse import OptionParser
+
+
+def markdown_filter(value, language='latex'):
+    if not value:
+        return ''
+    tmp = tempfile.NamedTemporaryFile(mode='w+', encoding='utf-8')
+    if language == 'latex':
+        value = value.replace('~', '$\\sim$')
+        value = re.sub('([^ ]) - ([^ ])', '\\1 --- \\2', value)
+    tmp.write(value)
+    tmp.flush()
+    out = subprocess.check_output(
+        ['pandoc', '-f', 'markdown', '-t', language,
+         tmp.name]).decode('UTF-8')
+    if language == 'latex':
+        out = out.replace('\n\n\\begin{itemize}', '\n\\begin{itemize}')
+        out = out.replace('\n\n  \\begin{itemize}', '\n\\begin{itemize}')
+    tmp.close()
+    return out
+
+
+def regex_filter(value, match, replace):
+    return re.sub(match, replace, value)
+
+
+def main():
+    parser = OptionParser(usage="Usage: %prog <src.jinja>",
+                          description=__doc__)
+    parser.add_option('-j',
+                      '--json',
+                      dest='json',
+                      type='string',
+                      action='append',
+                      default=[],
+                      help='Use the provided json as data.')
+    parser.add_option('-y',
+                      '--yaml',
+                      dest='yaml',
+                      type='string',
+                      action='append',
+                      default=[],
+                      help='Use the provided yaml as data.')
+    parser.add_option('-s',
+                      '--set',
+                      dest='set',
+                      type='string',
+                      action='append',
+                      default=[],
+                      help='Set an individual data value.')
+    parser.add_option('-o',
+                      '--output',
+                      dest='output',
+                      type='string',
+                      default=None,
+                      help='Output to the passed file.')
+    parser.add_option('-t',
+                      '--template-directory',
+                      dest='tdir',
+                      action='append',
+                      default=[],
+                      help='Use the given directory for tempates.')
+    (opts, args) = parser.parse_args()
+    if len(args) != 1:
+        parser.error('Invalid arguments.')
+    if opts.tdir:
+        dirs = opts.tdir
+    else:
+        dirs = [os.path.dirname(args[0])]
+    env = Environment(loader=FileSystemLoader(dirs))
+    env.block_start_string = '((*'
+    env.block_end_string = '*))'
+    env.variable_start_string = '((('
+    env.variable_end_string = ')))'
+    env.coment_start_string = '((='
+    env.coment_end_string = '=))'
+    env.filters['markdown'] = markdown_filter
+    env.filters['regex'] = regex_filter
+    t = env.get_template(os.path.basename(args[0]))
+    d = {}
+    for j in opts.json:
+        with open(j) as fd:
+            d.update(json.load(fd))
+    for y in opts.yaml:
+        with open(y) as fd:
+            d.update(yaml.safe_load(fd))
+    for e in opts.set:
+        (k, v) = e.split('=')
+        d[k] = v
+    o = sys.stdout
+    if opts.output:
+        o = codecs.open(opts.output + '.tmp', 'w', 'UTF-8')
+    t.stream(d).dump(o)
+    if opts.output:
+        o.close()
+        os.rename(opts.output + '.tmp', opts.output)
+
+
+if __name__ == '__main__':
+    main()

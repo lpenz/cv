@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <!--- Basic Page Needs ================================================== -->
+  <meta charset="utf-8">
+  <title>(((name)))</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS ================================================== -->
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/lpenz.css">
+  <link rel="stylesheet" href="css/media-queries.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <!-- Script ================================================== -->
+  <script src="js/modernizr.js"></script>
+
+  <!-- Favicons ================================================== -->
+  <link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+  <body>
+
+    <!-- Header ================================================== -->
+    <header id="home">
+
+      <nav id="nav-wrap">
+
+        <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+        <ul id="nav" class="nav">
+          <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+          <li><a class="smoothscroll" href="#about">About</a></li>
+          <li><a class="smoothscroll" href="#experience">Experience</a></li>
+          <li><a class="smoothscroll" href="#education">Education</a></li>
+          <li><a class="smoothscroll" href="#courses">Other courses</a></li>
+          <li><a class="smoothscroll" href="#misc">Misc</a></li>
+        </ul>
+
+      </nav>
+
+      <div class="row banner">
+        <div class="banner-text">
+          <h1 class="responsive-headline">(((name)))</h1>
+          <hr />
+          <ul class="social">
+            <li><a href="mailto:(((email)))"><i class="fa fa-envelope"></i></a></li>
+((* if phone *))
+            <li><a href="tel:(((phone)))"><i class="fa fa-phone"></i></a></li>
+((* endif *))
+            <li><a href="(((homepage)))"><i class="fa fa-globe"></i></a></li>
+            <li><a href="https://github.com/(((user)))"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://twitter.com/(((user)))"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/(((user)))"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://stackoverflow.com/cv/(((user)))"><i class="fa fa-stack-overflow"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="scrolldown">
+      <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+      </p>
+
+    </header>
+
+
+    <!-- About Section ================================================== -->
+    <section id="about">
+      <div class="row">
+        <div class="three columns">
+          <img class="profile-pic"  src="images/lpenz.jpg" alt="" />
+        </div>
+
+        <div class="nine columns main-col">
+          <h2>About Me</h2>
+          <p/>
+          (((aboutme | markdown("html") )))
+          <p/>
+        </div>
+      </div>
+    </section> <!-- About Section End-->
+
+
+    <section id="experience" class="lpsection">
+      <div class="row work">
+        <div class="three columns header-col">
+          <h1><span>Experience</span></h1>
+        </div>
+
+        <div class="nine columns main-col">
+          ((* for p in professional *))
+          <div class="row item">
+            <div class="twelve columns libullets">
+              <h3>(((p.place)))</h3>
+              <p class="info">(((p.job))) <span>&bull;</span> <em class="date">(((p.period)))</em></p>
+              <p/>
+              (((p.description | markdown("html") )))
+              <p/>
+            </div>
+          </div>
+          ((* endfor *))
+        </div>
+      </div>
+    </section>
+
+
+    <section id="education" class="lpsection">
+      <div class="row education">
+        <div class="three columns header-col">
+          <h1><span>Education</span></h1>
+        </div>
+
+        <div class="nine columns main-col">
+          ((* for e in education *))
+          <div class="row item">
+            <div class="twelve columns libullets">
+              <h3>(((e.course)))</h3>
+              <p class="info">(((e.place)))<span>&bull;</span> <em class="date">(((e.period)))</em></p>
+              <p/>
+              (((e.description | markdown("html") )))
+              <p/>
+            </div>
+          </div>
+          ((* endfor *))
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="lpsection">
+      <div class="row">
+        <div class="three columns header-col">
+          <h1><span>Other courses</span></h1>
+        </div>
+
+        <div class="nine columns main-col">
+          ((* for c in courses *))
+          <div class="row item">
+            <div class="twelve columns libullets">
+              <h3>(((c.course)))</h3>
+              <p class="info">(((c.place)))<span>&bull;</span> <em class="date">(((c.period)))</em></p>
+              <p/>
+              (((c.description | markdown("html") )))
+              <p/>
+            </div>
+          </div>
+          ((* endfor *))
+        </div>
+      </div>
+    </section>
+
+    <section id="misc" class="lpsection">
+      <div class="row">
+        <div class="three columns header-col">
+          <h1><span>Misc</span></h1>
+        </div>
+
+        <div class="nine columns main-col pbullets">
+          <ul>
+            ((* for r in random *))
+            <li>(((r | markdown("html") )))</li>
+            ((* endfor *))
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- footer ================================================== -->
+    <footer>
+      <div class="row">
+        <div class="twelve columns">
+          <ul class="social-links">
+            <li><a href="mailto:(((email)))"><i class="fa fa-envelope"></i></a></li>
+((* if phone *))
+            <li><a href="tel:(((phone)))"><i class="fa fa-phone"></i></a></li>
+((* endif *))
+            <li><a href="(((homepage)))"><i class="fa fa-globe"></i></a></li>
+            <li><a href="https://github.com/(((user)))"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://twitter.com/(((user)))"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/(((user)))"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://stackoverflow.com/cv/(((user)))"><i class="fa fa-stack-overflow"></i></a></li>
+          </ul>
+
+          <ul class="copyright">
+            <li>&copy; Copyright 2014 CeeVee</li>
+            <li>Design by <a href="http://www.styleshout.com/" title="Styleshout" target="_blank">Styleshout</a></li>   
+          </ul>
+        </div>
+
+        <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+      </div>
+    </footer> <!-- Footer End-->
+
+    <!-- Java Script ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/waypoints.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/magnific-popup.js"></script>
+    <script src="js/init.js"></script>
+
+  </body>
+
+</html>
+<!-- vim: ft=html.jinja sw=2
+-->

@@ -1,0 +1,49 @@
+# Rules: #####################################################################
+
+rule cutreadme
+  command = ./tools/cutreadme $in $out
+
+rule mdhtml
+  command = pandoc -f markdown -t html -V "title:Leandro Lisboa Penz" -s --template pandoc-bootstrap/template.html --css pandoc-bootstrap/template.css -o $out $in
+
+rule mdtxt
+  command = pandoc -f markdown -t plain -V "title:Leandro Lisboa Penz" -s -o $out $in
+
+rule cvrender
+  command = ./tools/jinja2-render -y lpenz.yml -o $out $in
+
+rule cdpdflatex
+  command = ./tools/cddo $in $$PWD/tools/latexer
+
+# Builds: ####################################################################
+
+# resumecls view:
+build resumecls/cv.tex: cvrender   resumecls/cv.tex.jinja | lpenz.yml ./tools/jinja2-render
+build resumecls/cv.pdf: cdpdflatex resumecls/cv.tex | ./tools/cddo ./tools/latexer ./resumecls/resume.cls
+
+# beamer view:
+build beamer/cv.tex: cvrender   beamer/cv.tex.jinja | lpenz.yml ./tools/jinja2-render
+build beamer/cv.pdf: cdpdflatex beamer/cv.tex | ./tools/cddo ./tools/latexer
+
+# moderncvclassic view:
+build moderncvclassic/cv.tex: cvrender   moderncvclassic/cv.tex.jinja | lpenz.yml ./tools/jinja2-render
+build moderncvclassic/cv.pdf: cdpdflatex moderncvclassic/cv.tex | ./tools/cddo ./tools/latexer
+
+# orbit view:
+build orbit/cv.html: cvrender   orbit/cv.html.jinja | lpenz.yml ./tools/jinja2-render
+
+# ceevee view:
+build ceevee/cv.html: cvrender  ceevee/cv.html.jinja | lpenz.yml ./tools/jinja2-render
+
+# markdown view:
+build markdown/cv.md: cvrender  markdown/cv.md.jinja | lpenz.yml ./tools/jinja2-render
+
+# markdown-html view:
+build markdown/cv.html: mdhtml markdown/cv.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
+
+# markdown-txt view:
+build markdown/cv.txt: mdtxt markdown/cv.md
+
+# index page:
+build _readme.md: cutreadme README.md | ./tools/cutreadme
+build index.html: mdhtml _readme.md | pandoc-bootstrap/template.css pandoc-bootstrap/template.html
